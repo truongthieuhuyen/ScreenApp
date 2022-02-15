@@ -1,0 +1,108 @@
+.box {
+    width: 355px;
+    height: 221px;
+    position: absolute;
+    top: 147px;
+    border-radius: 20px;
+    background: #E5E5E559;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-icon {
+    background-image: url(Images/Symbols/charger.png);
+    height: 52px;
+    width: 52px;
+    margin-top: 41px;
+
+}
+
+.box h5 {
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.3858824074268341px;
+
+    margin-top: 14px;
+}
+
+.box p {
+    margin-top: 14px;
+    width: 281px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 17px;
+    letter-spacing: -0.3858824074268341px;
+
+}
+
+.order {
+    width: 355px;
+    position: absolute;
+    top: 400px;
+}
+
+.order h5 {
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.5788236856460571px;
+    text-align: left;
+
+    margin-bottom: 25px;
+}
+
+.order-list {
+    padding: 0;
+}
+
+.order-item {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    margin-bottom: 23px;
+}
+
+.order-item img {
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+}
+
+.textbox{
+    margin-left: 14px;
+}
+.textbox h6{
+    margin-bottom: 5px;
+}
+.textbox p {
+    font-style: normal;
+    font-weight: 300;
+    line-height: 17px;
+    letter-spacing: -0.3858824074268341px;
+    color: darkgrey;
+
+}
+
+.order-status {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.order-status .status {
+    height: 17px;
+    width: 61px;
+}
+.order-status .clock {
+    height: 14px;
+    width: 14px;
+    margin-left: 16px;
+    margin-right: 8px;
+}
+.order-item .order-status p{
+    color: black;
+}

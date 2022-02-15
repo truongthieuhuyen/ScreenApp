@@ -1,0 +1,181 @@
+.opacity {
+    position: fixed;
+    z-index: 1;
+    opacity: 0.5;
+    width: 375px;
+    height: 812px;
+    background-color: grey;
+}
+
+.rectangle, .profile-menu {
+    position: fixed !important;
+}
+
+.payment {
+    z-index: 10;
+    position: absolute;
+    width: 375px;
+    height: 694px;
+    top: 316px;
+
+    background: #FFFFFF;
+    box-shadow: 0px -5px 16px rgba(0, 0, 0, 0.25);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.payment img {
+    position: absolute;
+    width: 33px;
+    height: 3px;
+    left: calc(50% - 33px/2);
+    top: 10px;
+}
+
+.payment h4 {
+    /* position: absolute; */
+    width: 251px;
+    height: 19px;
+    margin-left: 10px;
+    margin-top: 29px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+
+    color: #4A4A4A;
+}
+
+.payment p:nth-child(4) {
+    position: absolute;
+    width: 104px;
+    height: 19px;
+    left: calc(50% - 104px/2 - 125.5px);
+    top: 75px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+
+    color: #4A4A4A;
+}
+
+.line {
+    position: absolute;
+    width: 355px;
+    left: calc(50% - 355px/2);
+    top: 72px;
+
+    border: 0.5px solid #C4C4C4;
+}
+
+.line:last-child {
+    top: 307px;
+}
+
+.methods {
+    position: absolute;
+    height: 40px;
+    left: calc(50% - 15px/2 - 155px);
+    top: 111px;
+    display: flex;
+    align-items: center;
+}
+
+.methods:nth-child(6) {
+    /* position: absolute; */
+    top: 154px;
+}
+
+.methods:nth-child(6) .method-logo {
+    background: url("Images/Symbols/momo\ 1.png");
+    background-position: center;
+}
+
+.methods:nth-last-child(2) {
+    top: 255px;
+}
+
+.methods:nth-last-child(2) .method-logo {
+    background-image: url("Images/Symbols/Price.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0px ;
+}
+
+.methods p {
+    margin: 0px;
+    height: 17px;
+    margin-left: 13px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #000000;
+}
+
+.method-checkbox {
+    width: 15px;
+    height: 15px;
+
+    background: #6D6D6D;
+    border-radius: 1px;
+}
+
+.method-checkbox img {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    left: 2px;
+    top: 15px;
+}
+
+.method-logo {
+    background-image: url("Images/Symbols/ZaloPay-logo\ 1.png");
+    height: 27px;
+    width: 27px;
+    margin-left: 17px;
+}
+
+.full-line {
+    position: absolute;
+    width: 375px;
+    left: 0;
+    top: 209px;
+
+    border: 0.5px solid #C4C4C4;
+}
+
+.payment p:nth-child(8) {
+    position: absolute;
+    width: 167px;
+    height: 19px;
+    left: calc(50% - 167px/2 - 94px);
+    top: 221px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+
+    color: #4A4A4A;
+}
+
+.methods .sub-text {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+}

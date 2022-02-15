@@ -1,0 +1,135 @@
+body {
+    font-family: 'Montserrat';
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+    position: relative;
+}
+
+p {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+
+    animation-name: animatebottom;
+    animation-duration: 1s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.status-bar {
+    /* position: fixed; */
+    height: 44px;
+    width: 375px;
+    left: 0px;
+    top: 0px;
+    display: flex;
+}
+
+.status-time {
+    align-self: center;
+    height: 18px;
+    width: 54px;
+    display: flex;
+    justify-content: center;
+}
+
+.status-time p {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -0.16500000655651093px;
+
+}
+
+.status-icon {
+    margin-left: auto;
+    margin-right: 15px;
+    align-self: center;
+    height: 21px;
+    width: 69px;
+    left: 293.5px;
+    top: 17.160003662109375px;
+
+}
+
+.rectangle {
+    position: absolute;
+    background-image: url("Images/background.png");
+    height: 348px;
+    width: 375px;
+    left: 0px;
+    top: 0px;
+    background-position: left;
+    background-size: cover;
+}
+
+.thread {
+    font-size: 30px;
+    position: absolute;
+    height: auto;
+    width: auto;
+    left: 10px;
+    top: 78px;
+    text-align: left;
+}
+
+#loader {
+    height: 80px;
+    width: 80px;
+    position: fixed;
+    left: 60%;
+    top: 406px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    animation: spin 2s linear infinite;
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -1000px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+.btn-back {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    left: 20px;
+    top: 49px;
+    background-image: url('Images/Symbols/icon-back.png');
+}
+
+.btn-back:active {
+    background-color: #E5E5E559;
+}
+
+#profile-sec, #order-sec, #news-sec, #faqs-sec, #partner-sec, #help-sec, #new-detail-sec {
+    display: none;
+    text-align: center;
+}

@@ -1,0 +1,159 @@
+.represent {
+    position: absolute;
+    display: flex;
+    height: 97px;
+    top: 88px;
+}
+
+.represent div {
+    align-self: center;
+    position: absolute;
+    left: 129px;
+}
+
+.represent-avatar {
+    position: relative;
+    left: 13px;
+
+}
+
+.represent-name {
+    font-family: Montserrat;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: -0.3858824074268341px;
+    text-align: left;
+    height: 23px;
+    width: 123px;
+}
+
+.represent-phone {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-align: left;
+    height: 23px;
+    width: 156px;
+
+}
+
+.represent-under {
+    height: 60px;
+    top: 213px;
+    position: absolute;
+}
+
+.transaction {
+    position: relative;
+    width: 140px;
+    left: 13px;
+
+}
+
+.transaction-times {
+    position: absolute;
+    height: 37px;
+    width: 123px;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 37px;
+    letter-spacing: -0.5788236856460571px;
+    text-align: left;
+
+}
+
+.transaction-btn {
+    position: absolute;
+    height: 37px;
+    width: 89px;
+    left: 247px;
+    top: 5px;
+    border-radius: 20px;
+    border: 1px solid #4F4F4F;
+    box-sizing: border-box;
+}
+
+.transaction-btn:hover {
+    cursor: pointer;
+}
+
+.transaction-btn:active {
+    background-color: rgb(145, 72, 120);
+}
+
+.transaction-btn p {
+    width: 78px;
+    height: 19px;
+    margin: 9px 5px 9px 5px;
+
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+    align-items: center;
+    text-align: center;
+
+    color: #4A4A4A;
+
+}
+
+.transaction:first-child {
+    height: 19px;
+    width: 142px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.profile-menu {
+    height: 614px;
+    width: 375px;
+    left: 0px;
+    top: 348px;
+    background: #F6F6F6;
+    position: absolute;
+}
+
+.menu-item {
+    display: flex;
+    padding-top: 32px;
+    padding-left: 29px;
+}
+.menu-item a{
+    display: flex;
+    text-decoration: none;
+    width: 100%;
+    color: black;
+}
+
+.symbol {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    background: #ECF1CC;
+    border-radius: 15px;
+}
+
+.symbol img {
+    align-self: center;
+}
+
+.menu-text {
+    margin: 0;
+    margin-left: 25px;
+    align-self: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0px;
+    text-align: left;
+
+}

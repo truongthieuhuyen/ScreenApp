@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="editProfile.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+        integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+        crossorigin="anonymous"></script>
+    <script src="editProfile.js"></script>
+</head>
+
+<body>
+    <header></header>
+
+    <main>
+        <section id="">
+            <div class="status-bar">
+                <div class="status-time">
+                    <p>9:41</p>
+                </div>
+                <div class="status-icon">
+                    <img src="Images/Component/Bars/Status/Wi-Fi.png" alt="">
+                    <img src="Images/Component/Bars/Status/Combined Shape.png" alt="">
+                    <img src="Images/Component/Bars/Status/Battery.png" alt="">
+                </div>
+            </div>
+    
+            <a href="" class="btn-back rounded-circle" onclick="history.back(-1)"></a>
+            <h2 class="thread">My Profile</h2>
+    
+            <div class="row m-0" style="position: absolute; top: 136px;">
+                <div class="col-lg-9 px-0 d-flex justify-content-center">
+                    <!-- Accordion -->
+                    <div id="accordionExample" class="accordion">
+    
+                        <!-- Accordion item 1 -->
+                        <div class="">
+                            <div id="headingOne" class="menu-header">
+                                <a href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false"
+                                    aria-controls="collapseOne"
+                                    class="d-flex position-relative text-dark collapsible-link ">
+                                    <div class="symbol">
+                                        <img src="Images/Symbols/Profile.png" alt="">
+                                    </div>
+                                    <div class="menu-text" data-toggle="collapse" data-target="#collapseOne"
+                                        aria-expanded="true" aria-controls="collapseOne">
+                                        <p class="item-text">My profile</p>
+                                        <p class="sub-text">Lorem ipsum (+84) 912345678</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="collapseOne" aria-labelledby="headingOne" data-parent="#accordionExample"
+                                class="collapse align-self-center">
+                                <div class="menu-expand">
+                                    <img src="Images/Symbols/Avatar profile.png" alt="">
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-circle" data-toggle="modal" data-target="#modelId">
+                                        <img src="Images/Symbols/camera.png" alt="">
+                                    </button>
+                                    <!-- Form -->
+                                    <form class="row g-3 needs-validation form" novalidate>
+                                        <div class="col-md-4 px-0">
+                                            <label for="validationCustom01" class="form-label">First name</label>
+                                            <input type="text" class="form-control" id="validationCustom01" value=""
+                                                required>
+                                            <div class="valid-tooltip">
+                                                Looks good!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 px-0">
+                                            <label for="validationCustom02" class="form-label">Last name</label>
+                                            <input type="text" class="form-control" id="validationCustom02" value=""
+                                                required>
+                                            <div class="valid-tooltip">
+                                                Looks good!
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 px-0">
+                                            <div class="row m-0">
+                                                <div class="col-3 col-md-3 col-sm-3 ps-0 pe-0">
+                                                    <select class="form-select" id="validationCustom03" required>
+                                                        <option selected disabled value="">...</option>
+                                                        <option>+84</option>
+                                                    </select>
+                                                    <div class="invalid-tooltip">
+                                                        Please select a valid state.
+                                                    </div>
+                                                </div>
+                                                <div class="col-9 col-md-9 col-sm-9 pe-0">
+                                                    <input type="text" class="form-control" id="validationCustom05"
+                                                        value="912345678" required>
+                                                </div>
+    
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12 col-xs-12 px-0">
+                                            <button class="btn btn-orange" type="submit">Save</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Accordion item 2 -->
+                        <div class="">
+                            <div id="headingTwo" class="menu-header">
+                                <a href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                    aria-controls="collapseTwo"
+                                    class="d-flex position-relative text-dark collapsible-link ">
+                                    <div class="symbol" style="background-color: #CEEED7;">
+                                        <img src="Images/Symbols/Privacy.png" alt="">
+                                    </div>
+                                    <div class="menu-text" data-toggle="collapse" data-target="#collapseTwo"
+                                        aria-expanded="true" aria-controls="collapseTwo">
+                                        <p class="item-text">Change password</p>
+                                        <p class="sub-text">* * * * * * * * *</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="collapseTwo" aria-labelledby="headingTwo" data-parent="#accordionExample"
+                                class="collapse align-self-center">
+                                <div class="menu-expand" style="height: 285px;">
+                                    <form class="row g-3 needs-validation form " novalidate>
+                                        <div class="col-md-4 px-0">
+                                            <input type="password" class="form-control" id="pass1"
+                                                placeholder="Old password" required>
+                                            <div class="valid-tooltip">
+                                                Looks good!
+                                            </div>
+                                            <button class="border-0 bg-white rounded-circle eye" onclick="toggle()"
+                                                type="button" id="eye1">
+                                                <img src="Images/Symbols/blindfold.png" alt="" id="img1">
+                                            </button>
+                                        </div>
+                                        <div class="col-md-4 px-0">
+                                            <input type="password" class="form-control" id="pass2"
+                                                placeholder="New password" required>
+                                            <div class="valid-tooltip">
+                                                Looks good!
+                                            </div>
+                                            <button class="border-0 bg-white rounded-circle eye" onclick="toggle()"
+                                                type="button" id="eye2">
+                                                <img src="Images/Symbols/blindfold.png" alt="">
+                                            </button>
+                                        </div>
+                                        <a href="#" class="text-center text-dark text-underline"><span><ins>Forgot
+                                                    password?</ins> </span></a>
+                                        <div class="col-md-12 col-sm-12 col-xs-12 px-0">
+                                            <button class="btn btn-orange" type="button" onclick="save()">Save</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Accordion item 3 -->
+                        <div class="">
+                            <div id="headingThree" class="menu-header">
+                                <a href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                    aria-controls="collapseThree"
+                                    class="d-flex position-relative text-dark collapsible-link ">
+                                    <div class="symbol" style="background-color: #DCE0E9;">
+                                        <img src="Images/Symbols/Languages.png" alt="">
+                                    </div>
+                                    <div class="menu-text" data-toggle="collapse" data-target="#collapseThree"
+                                        aria-expanded="true" aria-controls="collapseThree">
+                                        <p class="item-text">Change Language</p>
+                                        <p class="sub-text">English</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="collapseThree" aria-labelledby="headingThree" data-parent="#accordionExample"
+                                class="collapse align-self-center">
+                                <div class="menu-expand" style="height: auto;">
+                                    <div class="w-100 list-group">
+                                        <a href="#" class="list-group-item list-group-item-action">Tiếng Việt</a>
+                                        <a href="#" class="list-group-item list-group-item-action disabled">English</a>
+                                        <a href="#" class="list-group-item list-group-item-action ">简体中文</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Accordion item 4 -->
+                        <div class="">
+                            <div id="headingFour" class="menu-header">
+                                <a href="" class="d-flex position-relative text-dark collapsible-link" id="signout">
+                                    <div class="symbol" style="background-color: #F4D4C9;">
+                                        <img src="Images/Symbols/Sign out.png" alt="">
+                                    </div>
+                                    <div class="menu-text" data-toggle="collapse" data-target="#collapseFour"
+                                        aria-expanded="true" aria-controls="collapseFour">
+                                        <p class="item-text">Sign out</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <!-- Modal -->
+            <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content animate-bottom">
+    
+                        <div class="modal-body">
+                            <div class="container-fluid" style="font-size: 12px;">
+                                Ảnh đại diện
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <button type="button" class="close w-100" style="font-size: 14px;">
+                                <span>Chụp ảnh</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <button type="button" class="close w-100" style="font-size: 14px;">
+                                <span>Chọn ảnh có sẵn</span>
+                            </button>
+                        </div>
+                        <div class="modal-footer ">
+                            <button type="button" class="close w-100" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true" style="color: #FF4500; font-size: 14px;">Hủy</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

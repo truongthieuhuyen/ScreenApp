@@ -1,0 +1,101 @@
+#news-sec .more {
+    position: absolute;
+    left: calc(50% - 75px /2 + 140px);
+    top: 94px;
+    color: black;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+    letter-spacing: -0.385882px;
+    text-decoration: underline;
+}
+#news-sec .more:active,.more:hover{
+    color: black;
+}
+#news-sec .card:hover, .card:active {
+    box-shadow: 5px 5px 6px 0px #DADADA;
+    transition: ease all 0.5s;
+}
+
+#news-sec .card .card-body a {
+    color: black;
+}
+
+#news-sec .slide {
+    position: absolute;
+    height: 216px;
+    width: 355px;
+    left: 10px;
+    top: 138px;
+    overflow: auto;
+}
+
+#news-sec .card-group {
+    display: flex;
+    width: fit-content;
+    height: 216px;
+    overflow-x: hidden;
+}
+
+#news-sec .card-group .card {
+    width: 241px;
+    margin-right: 15px;
+    margin-bottom: 0px;
+    border: 0px;
+    background-color: #F5F5F5;
+
+}
+
+#news-sec .card-body {
+    padding: 6px 0 0 6px;
+}
+
+#news-sec .card-body p {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: -0.16500000655651093px;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+#news-sec .card-body .card-title {
+    width: auto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.16500000655651093px;
+    text-align: left;
+
+}
+
+.news {
+    position: absolute;
+    top: 386px;
+    width: 355px;
+}
+
+.news h5 {
+    text-align: left;
+}
+
+.news div {
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+}
+
+.news .card {
+    width: 173px;
+    height: 192px;
+    padding: 0;
+    margin-bottom: 17px;
+    border: 0px;
+}
+
+.news .card img {
+    width: 100%;
+    /* height: 100%; */
+}
