@@ -17,7 +17,10 @@
     <link rel="stylesheet" href="editProfile.css">
     <link rel="stylesheet" href="order.css">
     <link rel="stylesheet" href="news.css">
-    <link rel="stylesheet" href="fags.css">
+    <link rel="stylesheet" href="faqs.css">
+    <link rel="stylesheet" href="partner.css">
+    <link rel="stylesheet" href="help.css">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +34,7 @@
 
     <main>
         <!-- Menu Profile section -->
-        <section id="menu">
+        <section id="menu-sec" class="flex">
             <div class="rectangle">
                 <div class="status-bar">
                     <div class="status-time">
@@ -113,7 +116,7 @@
         </section>
 
         <!-- Profile section -->
-        <section id="profile-sec">
+        <section id="profile-sec" class="none">
             <div class="status-bar">
                 <div class="status-time">
                     <p>9:41</p>
@@ -247,7 +250,7 @@
                                         <a href="#" class="text-center text-dark text-underline"><span><ins>Forgot
                                                     password?</ins> </span></a>
                                         <div class="col-md-12 col-sm-12 col-xs-12 px-0">
-                                            <button class="btn btn-orange" type="button" onclick="save()">Save</button>
+                                            <button class="btn btn-orange" type="button" onclick="">Save</button>
                                         </div>
                                     </form>
                                 </div>
@@ -330,7 +333,7 @@
             </div>
         </section>
         <!-- Order section -->
-        <section id="order-sec">
+        <section id="order-sec" class="none">
             <div class="status-bar">
                 <div class="status-time">
                     <p>9:41</p>
@@ -405,7 +408,7 @@
             </div>
         </section>
         <!-- News-sec -->
-        <section id="news-sec">
+        <section id="news-sec" class="none">
             <div class="status-bar">
                 <div class="status-time">
                     <p>9:41</p>
@@ -421,7 +424,6 @@
             <h1 class="thread">News</h1>
             <a href="#" class="more">Xem thêm</a>
 
-            <a href="" class="btn-back rounded-circle" onclick="history.back(-1)"></a>
             <div class="slide">
                 <div class="card-group">
                     <div class="card">
@@ -513,7 +515,7 @@
             </div>
 
             <!-- New detail section -->
-            <div id="new-detail-sec">
+            <div id="new-detail-sec" class="none">
                 <div class="status-bar">
                     <div class="status-time">
                         <p>9:41</p>
@@ -530,7 +532,7 @@
             </div>
         </section>
         <!-- FAQs-sec -->
-        <section id="faqs-sec">
+        <section id="faqs-sec" class="none">
             <div class="status-bar">
                 <div class="status-time">
                     <p>9:41</p>
@@ -548,33 +550,36 @@
                 <h6>Frequently asked questions and feedback</h6>
                 <p>Update 12/12/2020</p>
             </div>
+
             <!-- Accordion -->
-            <div class="accordionQ" id="accordianId" role="tablist" aria-multiselectable="true">
-                <div class="card">
-                    <div class="card-header" role="tab" id="headerId1">
-                        <a data-toggle="collapse" data-parent="#accordianId" href="#contentId1" aria-expanded="true"
-                            aria-controls="contentId1">
-                            1. Question 1
-                        </a>
-                    </div>
-                    <div id="contentId1" class="collapse in" role="tabpanel" aria-labelledby="headerId1">
-                        <div class="card-body">
-                            Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                            Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+            <div class="below">
+                <div id="accordianId" role="tablist" aria-multiselectable="true">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headerId1">
+                            <a data-toggle="collapse" data-parent="#accordianId" href="#contentId1" aria-expanded="true"
+                                aria-controls="contentId1">
+                                1. Question 1
+                            </a>
+                        </div>
+                        <div id="contentId1" class="collapse in" role="tabpanel" aria-labelledby="headerId1">
+                            <div class="card-body">
+                                Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" role="tab" id="headerId2">
-                        <a data-toggle="collapse" data-parent="#accordianId" href="#contentId2" aria-expanded="true"
-                            aria-controls="contentId2">
-                            2. Question 2
-                        </a>
-                    </div>
-                    <div id="contentId2" class="collapse in" role="tabpanel" aria-labelledby="headerId2">
-                        <div class="card-body">
-                            Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
-                            Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headerId2">
+                            <a data-toggle="collapse" data-parent="#accordianId" href="#contentId2" aria-expanded="true"
+                                aria-controls="contentId2">
+                                2. Question 2
+                            </a>
+                        </div>
+                        <div id="contentId2" class="collapse in" role="tabpanel" aria-labelledby="headerId2">
+                            <div class="card-body">
+                                Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                                Lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -582,26 +587,249 @@
 
         </section>
         <!-- Partner-sec -->
-        <section id="partner-sec"></section>
+        <section id="partner-sec" class="none">
+            <div class="status-bar">
+                <div class="status-time">
+                    <p>9:41</p>
+                </div>
+                <div class="status-icon">
+                    <img src="Images/Component/Bars/Status/Wi-Fi.png" alt="">
+                    <img src="Images/Component/Bars/Status/Combined Shape.png" alt="">
+                    <img src="Images/Component/Bars/Status/Battery.png" alt="">
+                </div>
+            </div>
+
+            <a href="" class="btn-back rounded-circle" onclick="history.back(-1)"></a>
+            <h1 class="thread">Become Our Partner</h1>
+            <div class="sub-thread">
+                <h6>Please fill in the form below, we will call you shortly!</h6>
+            </div>
+
+            <div class="below partner">
+                <form class="row g-3 needs-validation" novalidate>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="validationLocation" placeholder="Your Location"
+                            required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="validationContactPerson"
+                            placeholder="Contact person" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="row mx-0">
+                            <select class="form-select col-4" id="validationCountryCode" required>
+                                <option selected disabled value="" style="padding-left: 10px;">Select</option>
+                                <option>+84</option>
+                                <option>+86</option>
+                                <option>+44</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please choose a country code.
+                            </div>
+                            <input type="text" class="form-control col-8" id="validationPhoneNumber" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="validationEmail"
+                                aria-describedby="inputGroupAppend" required>
+                            <span class="input-group-text" id="inputGroupAppend">@</span>
+                            <input type="text" class="form-control" id="" aria-describedby="" required>
+                            <div class="invalid-feedback">
+                                Please provide your email.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="validationCity" placeholder="Province/City"
+                            required>
+                        <div class="invalid-feedback">
+                            Please provide a city.
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="validationAddress" placeholder="Address" required>
+                        <div class="invalid-feedback">
+                            Please provide your address.
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" id="validationDescription"
+                            placeholder="Description about your location" required>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-orange" type="submit">Send</button>
+                    </div>
+                </form>
+            </div>
+        </section>
         <!-- Help-sec -->
-        <section id="help-sec"></section>
+        <section id="help-sec" class="none">
+            <div class="status-bar">
+                <div class="status-time">
+                    <p>9:41</p>
+                </div>
+                <div class="status-icon">
+                    <img src="Images/Component/Bars/Status/Wi-Fi.png" alt="">
+                    <img src="Images/Component/Bars/Status/Combined Shape.png" alt="">
+                    <img src="Images/Component/Bars/Status/Battery.png" alt="">
+                </div>
+            </div>
+
+            <a href="" class="btn-back rounded-circle" onclick="history.back(-1)"></a>
+            <h1 class="thread">Help Center</h1>
+
+            <div class="below">
+                <div class="help ">
+                    <a id="terms" href="#terms-sec" onclick="loadSection(this.id)">
+                        <p>Terms of Service</p>
+                    </a>
+                </div>
+                <div class="help ">
+                    <a id="privacy" href="#privacy-sec" onclick="loadSection(this.id)">
+                        <p>Privacy policy</p>
+                    </a>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- Terms of Service -->
+        <section id="terms-sec" class="none">
+            <div class="status-bar">
+                <div class="status-time">
+                    <p>9:41</p>
+                </div>
+                <div class="status-icon">
+                    <img src="Images/Component/Bars/Status/Wi-Fi.png" alt="">
+                    <img src="Images/Component/Bars/Status/Combined Shape.png" alt="">
+                    <img src="Images/Component/Bars/Status/Battery.png" alt="">
+                </div>
+            </div>
+
+            <a href="" class="btn-back rounded-circle" onclick="history.back(-1)"></a>
+
+            <div class="help-item">
+                <div style="width: 355px;">
+                    <div class="help-img"></div>
+                    <h2>Terms of Service</h2>
+
+                    <div class="help-detail">
+                        <ul>
+                            <li class="help-detail--header">What's in these terms?
+                                <p>Terms of service (also known as terms of use and terms and conditions, commonly
+                                    abbreviated as TOS or ToS, ToU or T&C) are the legal agreements between a service
+                                    provider and a person who wants to use that service. The person must agree to abide
+                                    by the terms of service in order to use the offered service.</p>
+                            </li>
+                            <li class="help-detail--header">What's in these terms?
+                                <p>Terms of service (also known as terms of use and terms and conditions, commonly
+                                    abbreviated as TOS or ToS, ToU or T&C) are the legal agreements between a service
+                                    provider and a person who wants to use that service. The person must agree to abide
+                                    by the terms of service in order to use the offered service.</p>
+                            </li>
+                            <li class="help-detail--header">What's in these terms?
+                                <p>Terms of service (also known as terms of use and terms and conditions, commonly
+                                    abbreviated as TOS or ToS, ToU or T&C) are the legal agreements between a service
+                                    provider and a person who wants to use that service. The person must agree to abide
+                                    by the terms of service in order to use the offered service.
+                                </p>
+                            </li>
+                            <li class="help-detail--header">What's in these terms?
+                                <p>Terms of service (also known as terms of use and terms and conditions, commonly
+                                    abbreviated as TOS or ToS, ToU or T&C) are the legal agreements between a service
+                                    provider and a person who wants to use that service. The person must agree to abide
+                                    by the terms of service in order to use the offered service.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Privacy policy -->
+        <section id="privacy-sec" class="none">
+            <div class="status-bar">
+                <div class="status-time">
+                    <p>9:41</p>
+                </div>
+                <div class="status-icon">
+                    <img src="Images/Component/Bars/Status/Wi-Fi.png" alt="">
+                    <img src="Images/Component/Bars/Status/Combined Shape.png" alt="">
+                    <img src="Images/Component/Bars/Status/Battery.png" alt="">
+                </div>
+            </div>
+
+            <a href="" class="btn-back rounded-circle" onclick="history.back(-1)"></a>
+            <h1 class="thread">Privacy policy</h1>
+
+            <div class="help-item">
+                <div style="width: 355px;">
+                    <div class="help-img"></div>
+
+                    <div class="help-detail">
+                        <ul>
+                            <li class="help-detail--header">What's in these terms?
+                                <p>Terms of service (also known as terms of use and terms and conditions, commonly
+                                    abbreviated as TOS or ToS, ToU or T&C) are the legal agreements between a service
+                                    provider and a person who wants to use that service. The person must agree to abide
+                                    by the terms of service in order to use the offered service.</p>
+                            </li>
+                            <li class="help-detail--header">What's in these terms?
+                                <p>Terms of service (also known as terms of use and terms and conditions, commonly
+                                    abbreviated as TOS or ToS, ToU or T&C) are the legal agreements between a service
+                                    provider and a person who wants to use that service. The person must agree to abide
+                                    by the terms of service in order to use the offered service.</p>
+                            </li>
+                            <li class="help-detail--header">What's in these terms?
+                                <p>Terms of service (also known as terms of use and terms and conditions, commonly
+                                    abbreviated as TOS or ToS, ToU or T&C) are the legal agreements between a service
+                                    provider and a person who wants to use that service. The person must agree to abide
+                                    by the terms of service in order to use the offered service.
+                                </p>
+                            </li>
+                            <li class="help-detail--header">What's in these terms?
+                                <p>Terms of service (also known as terms of use and terms and conditions, commonly
+                                    abbreviated as TOS or ToS, ToU or T&C) are the legal agreements between a service
+                                    provider and a person who wants to use that service. The person must agree to abide
+                                    by the terms of service in order to use the offered service.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Loading effect -->
         <div id="loader" style="display: none;"></div>
+
     </main>
 
     <footer>
     </footer>
     <script>
+        // var curr = document.getElementsByTagName('section').style.display = "flex";
+        // console.log(curr);
+
+        // var element = document.querySelector("d-flex").classList.remove("d-flex")
 
         function loadSection(id) {
-            // document.getElementById('menu').style.opacity = "0.5";
+            // document.getElementById('menu-sec').style.opacity = "0.5";
             // document.getElementById('loader').style.display = "block";
-            var myVar = setTimeout(showOrder(id), 3000);
+
+            var myVar = setTimeout(showSection(id), 3000);
         }
-        function showOrder(id) {
-            document.getElementById('menu').style.display = "none";
-            // document.getElementById('loader').style.display = "none";
-            document.getElementById(id + '-sec').style.display = "flex";
+
+        function showSection(id) {
+            document.querySelector(".flex").classList.add("none");
+            document.querySelector(".flex").classList.remove("flex");
+            // element.classList.remove("flex");
+            document.getElementById(id + '-sec').classList.remove("none");
+            document.getElementById(id + '-sec').classList.add("flex");
         }
 
     </script>

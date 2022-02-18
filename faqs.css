@@ -5,23 +5,17 @@
     left: 10px;
     top: 165px;
     text-align: left;
-    line-height: 17, 07px;
+    line-height: 17px;
 }
 
-.accordionQ {
-    position: absolute;
-    top: 247px;
-
-}
-
-.accordionQ .card {
+.below .card {
     width: 355px;
     border: 0px;
     background-color: white;
     margin-bottom: 13px;
 }
 
-.accordionQ .card-header, .card-body {
+.below .card-header, .card-body {
     display: flex;
     text-align: left;
     background: #ECF0F3;
@@ -29,17 +23,17 @@
 
 }
 
-.accordionQ .card-header {
+.below .card-header {
     border-radius: 15px;
     /* box-shadow: 0 0 0 0; */
 }
 
-.accordionQ .card-body {
+.below .card-body {
     border-radius: 20px;
     margin-top: 7px;
 }
 
-.accordionQ .card-header a {
+.below .card-header a {
     width: 100%;
     color: black;
 }

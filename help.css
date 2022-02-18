@@ -1,0 +1,70 @@
+.help {
+    width: 355px;
+    height: 77px;
+    background: #FAFAFA;
+    border-radius: 15px;
+    margin-bottom: 13px;
+    display: flex;
+}
+
+.help a {
+    align-self: center;
+    padding-left: 19px;
+    display: flex;
+    color: black;
+    text-decoration: none;
+    width: 100%;
+}
+
+.help a::after {
+    content: url(Images/Symbols/Arrow.png);
+    position: absolute;
+    right: 13px;
+}
+
+.help-item {
+    position: absolute;
+    top: 94px;
+}
+
+.help-item .help-img {
+    background-image: url(Images/backgroun-h.png);
+    height: 46px;
+    width: 355px;
+}
+
+.help-item h2 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 61px;
+    letter-spacing: 0px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.help-detail ul {
+    padding-left: 1.15rem;
+}
+
+.help-detail li {
+    list-style: decimal;
+}
+
+.help-detail .help-detail--header {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: -0.16500000655651093px;
+}
+
+.help-detail .help-detail--header p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: -0.16500000655651093px;
+    text-align: justify;
+    margin-top: 10px;
+    margin-bottom: 9px;
+}

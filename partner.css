@@ -1,0 +1,16 @@
+.below form {
+    width: 355px;
+}
+
+.partner .form-control, .form-select {
+    height: 56px;
+    border-radius: 10px;
+
+}
+
+.partner .form-select {
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;   
+}
+.partner div:nth-last-child(2) .form-control{
+    height: 229px; 
+}
