@@ -812,22 +812,17 @@
     <footer>
     </footer>
     <script>
-        // var curr = document.getElementsByTagName('section').style.display = "flex";
-        // console.log(curr);
-
-        // var element = document.querySelector("d-flex").classList.remove("d-flex")
 
         function loadSection(id) {
             // document.getElementById('menu-sec').style.opacity = "0.5";
             // document.getElementById('loader').style.display = "block";
-
             var myVar = setTimeout(showSection(id), 3000);
         }
 
         function showSection(id) {
             document.querySelector(".flex").classList.add("none");
             document.querySelector(".flex").classList.remove("flex");
-            // element.classList.remove("flex");
+            
             document.getElementById(id + '-sec').classList.remove("none");
             document.getElementById(id + '-sec').classList.add("flex");
         }
