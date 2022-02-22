@@ -13,6 +13,7 @@
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="onboard.css">
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="editProfile.css">
     <link rel="stylesheet" href="order.css">
@@ -33,8 +34,62 @@
     </header>
 
     <main>
+        <section id="onboard-sec" class="onboarding">
+            <div class="onboarding-container">
+                <div class="content">
+                    <div class="rectangle--sm"></div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-img">
+                                <img src="Images/Rectangle 1.png" alt="">
+                            </div>
+                            <div class="step-textbox">
+                                <h4>Step 3</h4>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut,
+                                    facere!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-img">
+                                <img src="Images/Rectangle 1.png" alt="">
+                            </div>
+                            <div class="step-textbox">
+                                <h4>Step 3</h4>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut,
+                                    facere!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-img">
+                                <img src="Images/Rectangle 1.png" alt="">
+                            </div>
+                            <div class="step-textbox">
+                                <h4>Step 3</h4>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut,
+                                    facere!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dots">
+                        <div class="dot active"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+
+                    <button class="next-btn btn-orange">Next</button>
+                    <a href="#" class="skip-btn">Skip</a>
+                </div>
+        </section>
+
         <!-- Menu Profile section -->
-        <section id="menu-sec" class="flex">
+        <section id="menu-sec" class="none">
             <div class="rectangle">
                 <div class="status-bar">
                     <div class="status-time">
@@ -114,7 +169,6 @@
                 </div>
             </div>
         </section>
-
         <!-- Profile section -->
         <section id="profile-sec" class="none">
             <div class="status-bar">
@@ -804,25 +858,35 @@
                 </div>
             </div>
         </section>
+
         <!-- Loading effect -->
-        <div id="loader" style="display: none;"></div>
+        <div class="loader">
+            <div class="ring"></div>
+        </div>
 
     </main>
 
     <footer>
     </footer>
     <script>
+        const loader = document.querySelector(".loader");
+        window.onload = function () {
+            setTimeout(function () {
+                loader.style.opacity = "0";
+                setTimeout(function () {
+                    loader.style.display = "none";
+                }, 500);
+            }, 1500);
+        }
 
         function loadSection(id) {
-            // document.getElementById('menu-sec').style.opacity = "0.5";
-            // document.getElementById('loader').style.display = "block";
             var myVar = setTimeout(showSection(id), 3000);
         }
 
         function showSection(id) {
             document.querySelector(".flex").classList.add("none");
             document.querySelector(".flex").classList.remove("flex");
-            
+
             document.getElementById(id + '-sec').classList.remove("none");
             document.getElementById(id + '-sec').classList.add("flex");
         }
@@ -837,7 +901,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         crossorigin="anonymous"></script>
-
+    <script src="main.js"></script>
 </body>
 
 </html>

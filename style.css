@@ -1,12 +1,7 @@
-:root {
-    width: 375px;
-    height: 812px;
-}
-
-body {
-    font-family: 'Montserrat';
-    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
-    position: relative;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+* {
+    font-family: 'Montserrat', sans-serif;
+    /* position: relative; */
 }
 
 p {
@@ -20,11 +15,23 @@ p {
 }
 
 section {
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
 
     animation-name: animatebottom;
     animation-duration: 1s;
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -1000px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
 }
 
 a:hover {
@@ -107,41 +114,6 @@ a:hover {
     top: 247px;
 }
 
-#loader {
-    height: 80px;
-    width: 80px;
-    position: fixed;
-    left: 60%;
-    top: 406px;
-    margin: -76px 0 0 -76px;
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    animation: spin 2s linear infinite;
-
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes animatebottom {
-    from {
-        bottom: -1000px;
-        opacity: 0
-    }
-
-    to {
-        bottom: 0;
-        opacity: 1
-    }
-}
 
 .btn-back {
     position: absolute;

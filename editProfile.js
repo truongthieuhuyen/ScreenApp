@@ -16,9 +16,8 @@ function toggle() {
 function save() {
 	alert("Password has changed");
 }
+
 /* Sign out */
-
-
 
 // $('#exampleModal').on('show.bs.modal', event => {
 // 	var button = $(event.relatedTarget);

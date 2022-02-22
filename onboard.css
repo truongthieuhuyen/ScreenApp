@@ -1,0 +1,130 @@
+.loader {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F24405;
+    transition: all 0.5s;
+}
+
+.loader .ring {
+    height: 45px;
+    width: 45px;
+    /* border: 5px solid #f25c05; */
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader .ring:after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid rgb(255, 255, 255);
+    border-top-color: transparent;
+    animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.rectangle--sm {
+    width: 375px;
+    height: 261px;
+    background-color: #F28705;
+}
+
+.onboarding-container {
+    text-align: center;
+}
+
+.onboarding-container .content {
+    max-width: 375px;
+    overflow: hidden;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    width: 300%;
+}
+
+.step {
+    width: 355px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.step .step-img {
+    /* height: 340px;
+    width: 300px; */
+    position: relative;
+    top: calc(-261px + 99px);
+}
+
+.step .step-textbox {
+    margin-top: -136px;
+}
+
+.step .step-textbox h4 {
+    font-family: Montserrat;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -0.4823530912399292px;
+    margin-bottom: 16px;
+}
+
+.step .step-textbox p {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.4823530912399292px;
+    margin-bottom: 42px;
+}
+
+.onboarding-container .dots {
+    margin-bottom: 50px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.onboarding-container .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: black;
+    opacity: 0.6;
+}
+
+.onboarding-container .dot.active {
+    opacity: 1;
+}
+
+.onboarding-container .skip-btn {
+    text-decoration: underline;
+    position: absolute;
+    left: 42.4%;
+    right: 42.4%;
+    top: 91.63%;
+    bottom: 5.42%;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+}
