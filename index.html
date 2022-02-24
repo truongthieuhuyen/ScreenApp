@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="onboard.css">
     <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="payment.css">
     <link rel="stylesheet" href="editProfile.css">
     <link rel="stylesheet" href="order.css">
     <link rel="stylesheet" href="news.css">
@@ -44,10 +45,9 @@
                                 <img src="Images/Rectangle 1.png" alt="">
                             </div>
                             <div class="step-textbox">
-                                <h4>Step 3</h4>
+                                <h4>Scan QR code</h4>
                                 <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut,
-                                    facere!
+                                    Scan the QR code printed on the charging machine to rent a power bank
                                 </p>
                             </div>
                         </div>
@@ -56,10 +56,9 @@
                                 <img src="Images/Rectangle 1.png" alt="">
                             </div>
                             <div class="step-textbox">
-                                <h4>Step 3</h4>
+                                <h4>Take power bank</h4>
                                 <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut,
-                                    facere!
+                                    The power bank pops up after paying the deposit
                                 </p>
                             </div>
                         </div>
@@ -68,10 +67,10 @@
                                 <img src="Images/Rectangle 1.png" alt="">
                             </div>
                             <div class="step-textbox">
-                                <h4>Step 3</h4>
+                                <h4>Return power bank</h4>
                                 <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut,
-                                    facere!
+                                    With over XXX charging stations, you will be easily find a station to return the
+                                    powerbank after use.
                                 </p>
                             </div>
                         </div>
@@ -113,8 +112,42 @@
                         <p class="m-0">Transaction history</p>
                         <p class="transaction-times m-0">15 times</p>
                     </div>
-                    <div class="transaction-btn">
-                        <p>Payment</p>
+                </div>
+                <div class="container">
+                    <a class=" transaction-btn" href="#popup">Payment</a>
+                    <div class="popup" id="popup">
+                        <div class="popup-inner">
+                            <span>Manage payment method</span>
+                            <div class="line"></div>
+                            <p>Add methods</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                <img src="Images/Symbols/ZaloPay-logo 1.png" alt="" style="padding: 6.5px;">
+                                <label class="form-check-label" for="flexRadioDefault1">
+                                    Thanh toán bằng ví điện tử ZaloPay
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                                <img src="Images/Symbols/momo 1.png" alt="">
+                                <label class="form-check-label" for="flexRadioDefault2">
+                                    Thanh toán bằng ví điện tử MoMo
+                                </label>
+                            </div>
+                            <div class="full-line"></div>
+                            <p>Other payment method(s)</p>
+                            <button class="btn other-method px-0" type="button">
+                                <img src="Images/Symbols/Price.png" alt="" style="width: 21px; height: 15px;">
+                                <div>
+                                    <h6>Credit cards</h6>
+                                    <p>Avoid hassle by keeping the exact amount ready</p>
+                                </div>
+                            </button>
+                            <div class="line"></div>
+    
+                            <a class="closepopup" href="#">X</a>
+                            <button class="btn-orange" style="margin-top: 43px;" type="submit">Continue</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -182,7 +215,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="history.back(-1)"></a>
+            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
             <h1 class="thread">My Profile</h1>
 
             <div class="row m-0" style="position: absolute; top: 136px;">
@@ -357,7 +390,7 @@
 
 
             <!-- Modal -->
-            <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+            <div class="modal modal-avatar fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content animate-bottom">
@@ -399,7 +432,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="history.back(-1)"></a>
+            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
             <h1 class="thread">Order</h1>
 
             <div class="box">
@@ -474,7 +507,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="history.back(-1)"></a>
+            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
             <h1 class="thread">News</h1>
             <a href="#" class="more">Xem thêm</a>
 
@@ -581,7 +614,7 @@
                     </div>
                 </div>
 
-                <a href="" class="btn-back rounded-circle" onclick="history.back(-1)"></a>
+                <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
                 <h1 class="thread">Detail </h1>
             </div>
         </section>
@@ -598,7 +631,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="history.back(-1)"></a>
+            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
             <h1 class="thread">Frequently Asked Questions</h1>
             <div class="sub-thread">
                 <h6>Frequently asked questions and feedback</h6>
@@ -653,7 +686,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="history.back(-1)"></a>
+            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
             <h1 class="thread">Become Our Partner</h1>
             <div class="sub-thread">
                 <h6>Please fill in the form below, we will call you shortly!</h6>
@@ -736,7 +769,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="history.back(-1)"></a>
+            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
             <h1 class="thread">Help Center</h1>
 
             <div class="below">
@@ -767,7 +800,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="history.back(-1)"></a>
+            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
 
             <div class="help-item">
                 <div style="width: 355px;">
@@ -819,7 +852,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="history.back(-1)"></a>
+            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
             <h1 class="thread">Privacy policy</h1>
 
             <div class="help-item">

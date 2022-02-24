@@ -34,7 +34,8 @@
     line-height: 15px;
     color: #4F4F4F;
 }
-.menu-header a{
+
+.menu-header a {
     text-decoration: none;
 }
 
@@ -107,19 +108,6 @@
     border-radius: 10px;
 }
 
-.btn-orange {
-    color: #ffffff;
-    background-color: #FF4500;
-    border-color: #FF4500;
-
-    height: 50px;
-    width: 320px;
-    border-radius: 10px;
-    position: relative;
-    bottom: 0px;
-    
-}
-
 #collapseTwo div form div input {
     height: 50px;
 }
@@ -153,19 +141,19 @@
     top: -31px;
 }
 
-.modal {
+.modal-avatar {
     top: 583px;
 }
 
-.modal-body {
+.modal-avatar .modal-body {
     text-align: center;
 }
 
-.modal-body:active {
+.modal-avatar .modal-body:active {
     background-color: #dee2e6;
 }
 
-.modal-footer {
+.modal-avatar .modal-footer {
     border-top: 9px solid #dee2e6;
 }
 
@@ -205,7 +193,7 @@
     line-height: 17px;
     letter-spacing: 0px;
     text-align: left;
-    
+
     border: 0px;
 }
 
@@ -214,12 +202,13 @@
     position: absolute;
     right: 30px;
 }
-.list-group-item.disabled{
+
+.list-group-item.disabled {
     background-color: #E5E5E559;
     color: #979797;
 }
 
-.list{
+.list {
     display: flex;
     flex-direction: column;
 }

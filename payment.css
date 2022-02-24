@@ -1,14 +1,116 @@
-.opacity {
-    position: fixed;
-    z-index: 1;
-    opacity: 0.5;
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 375px;
     height: 812px;
-    background-color: grey;
 }
 
-.rectangle, .profile-menu {
-    position: fixed !important;
+.popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: inherit;
+    height: inherit;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    transition: .6s ease-in-out;
+}
+
+.popup-inner {
+    position: relative;
+    bottom: -724px;
+    display: flex;
+    flex-direction: column;
+    padding: 29px 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    /* align-items: center; */
+    max-width: 375px;
+    max-height: 812px;
+    width: 100%;
+    height: 80%;
+    background-color: #fff;
+    transition: .6s ease-in-out;
+}
+
+.popupphoto {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.popupphoto img {
+    width: auto;
+    height: 100%;
+}
+
+.popuptext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    padding: 4rem;
+}
+
+.popuptext h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #0A0A0A;
+}
+
+.popuptext p {
+    font-size: .875rem;
+    color: #686868;
+    line-height: 1.5;
+}
+
+.popuptext a {
+    text-decoration: none;
+    color: #47BDFF;
+}
+
+.popup:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup:target .popup-inner {
+    bottom: calc(812px - 110%);
+    right: 0;
+    transform: rotate(0);
+}
+
+.closepopup {
+    position: absolute;
+    right: 0rem;
+    top: 0rem;
+    width: 2rem;
+    height: 2rem;
+    z-index: 4;
+    color: #FF6700;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closepopup:hover {
+    color: #FF6700;
 }
 
 .payment {
@@ -67,115 +169,69 @@
 }
 
 .line {
-    position: absolute;
     width: 355px;
-    left: calc(50% - 355px/2);
-    top: 72px;
-
-    border: 0.5px solid #C4C4C4;
-}
-
-.line:last-child {
-    top: 307px;
-}
-
-.methods {
-    position: absolute;
-    height: 40px;
-    left: calc(50% - 15px/2 - 155px);
-    top: 111px;
-    display: flex;
-    align-items: center;
-}
-
-.methods:nth-child(6) {
-    /* position: absolute; */
-    top: 154px;
-}
-
-.methods:nth-child(6) .method-logo {
-    background: url("Images/Symbols/momo\ 1.png");
-    background-position: center;
-}
-
-.methods:nth-last-child(2) {
-    top: 255px;
-}
-
-.methods:nth-last-child(2) .method-logo {
-    background-image: url("Images/Symbols/Price.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0px ;
-}
-
-.methods p {
-    margin: 0px;
-    height: 17px;
-    margin-left: 13px;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 17px;
-
-    color: #000000;
-}
-
-.method-checkbox {
-    width: 15px;
-    height: 15px;
-
-    background: #6D6D6D;
-    border-radius: 1px;
-}
-
-.method-checkbox img {
-    position: absolute;
-    width: 11px;
-    height: 11px;
-    left: 2px;
-    top: 15px;
-}
-
-.method-logo {
-    background-image: url("Images/Symbols/ZaloPay-logo\ 1.png");
-    height: 27px;
-    width: 27px;
-    margin-left: 17px;
+    height: 1px;
+    background: #c4c4c4;
+    margin-top: 24px;
 }
 
 .full-line {
-    position: absolute;
-    width: 375px;
-    left: 0;
-    top: 209px;
-
-    border: 0.5px solid #C4C4C4;
+    /* width: 375px; */
+    height: 3px;
+    background: #c4c4c4;
+    margin-top: 15px;
+    margin-bottom: 9px;
 }
 
-.payment p:nth-child(8) {
-    position: absolute;
-    width: 167px;
-    height: 19px;
-    left: calc(50% - 167px/2 - 94px);
-    top: 221px;
+.form-check {
+    display: flex;
+    align-items: center;
+}
 
+.form-check-input {
+    width: 15px;
+    height: 15px;
+    margin-right: 11px;
+}
+
+.form-check-input[type=radio] {
+    border-radius: 0;
+}
+
+.form-check-input:checked[type=radio] {
+    background-image: url(Images/Symbols/check\ 1.png);
+}
+
+.form-check-input:checked {
+    background-color: #0A0A0A;
+    border-color: #0A0A0A;
+}
+
+.form-check-label {
+    font-size: 14px;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 13px;
+}
+
+.other-method {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.other-method div {
+    margin-left: 14px;
+}
+
+.other-method h6 {
+    line-height: 17px;
+    letter-spacing: 0px;
+}
+
+.other-method p {
     font-size: 12px;
-    line-height: 15px;
-    display: flex;
-    align-items: center;
-
-    color: #4A4A4A;
-}
-
-.methods .sub-text {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 10px;
-    line-height: 12px;
-    display: flex;
-    align-items: center;
 }

@@ -44,7 +44,7 @@ nextBtn.addEventListener("click", () => {
     //     currentStep = 0;
     // }
 
-    stepPosition += steps[0].offsetWidth;
+    stepPosition += steps[0].offsetWidth + 21;
     stepsContainer.style.transform = `translateX(-${stepPosition}px)`;
 
     dots.forEach((d) => {
@@ -52,7 +52,7 @@ nextBtn.addEventListener("click", () => {
     })
     dots[currentStep].classList.add("active");
 
-    if(currentStep == steps.length -1 ){
+    if (currentStep == steps.length - 1) {
         nextBtn.innerHTML = "Continue";
     }
 });
