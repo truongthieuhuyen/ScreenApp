@@ -1,4 +1,29 @@
+/* Loading effect */
 
+const loader = document.querySelector(".loader");
+window.onload = function () {
+    setTimeout(function () {
+        loader.style.opacity = "0";
+        setTimeout(function () {
+            loader.style.display = "none";
+        }, 500);
+    }, 1500);
+}
+
+/* Show section */
+function loadSection(id) {
+    var myVar = setTimeout(showSection(id), 3000);
+}
+
+function showSection(id) {
+    document.querySelector(".flex").classList.add("none");
+    document.querySelector(".flex").classList.remove("flex");
+
+    document.getElementById(id + '-sec').classList.remove("none");
+    document.getElementById(id + '-sec').classList.add("flex");
+}
+
+/* Handle onboarding screen */
 const steps = document.querySelectorAll(".onboarding-container .step");
 const stepsContainer = document.querySelector(".onboarding-container .steps");
 const nextBtn = document.querySelector(".onboarding-container .next-btn");
