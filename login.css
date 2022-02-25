@@ -1,0 +1,188 @@
+.login {
+    margin-top: 81px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.greeting {
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -0.4823530912399292px;
+    height: 60px;
+    width: 283px;
+    margin-bottom: 23px;
+}
+
+.login h6 {
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.4823530912399292px;
+    width: 347px;
+    height: 24px;
+}
+
+.login p {
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.43411770462989807px;
+
+}
+
+.login a {
+    color: #FF6700;
+}
+
+/* Form with socail media */
+.login .container {
+    width: 355px;
+}
+
+.card {
+    border: none;
+    align-items: center;
+
+}
+
+p {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.division {
+    float: none;
+    position: relative;
+    margin: 0 auto 0;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box
+}
+
+.division span {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.4823530912399292px;
+
+}
+
+.division p {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.43411770462989807px;
+
+}
+
+.myform {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.myform .form-group {
+    width: 100%;
+}
+
+.myform .form-control {
+    border: 1px solid #979797;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    letter-spacing: 1px
+}
+
+.myform .form-select {
+    border: 1px solid #979797;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    letter-spacing: 1px
+}
+
+.myform .form-control:focus, .form-select:focus {
+    border: 1px solid #57557A;
+    border-radius: 10px;
+    box-shadow: none;
+    color: #000000;
+    letter-spacing: 1px
+}
+
+.myform .form-select, .form-check, .form-control {
+    height: 48px;
+}
+
+.myform .form-check-input {
+    margin-left: -1.25rem;
+}
+
+.social-connection {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+}
+
+.social-connection .social-item {
+    border: 1px solid #979797;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    height: 48px;
+    width: 100%;
+    background-color: #fff;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.3858824074268341px;
+}
+
+.social-connection img {
+    margin-right: 9px;
+}
+
+.bn {
+    text-decoration: underline;
+}
+
+.bn:hover {
+    cursor: pointer
+}
+
+.far.fa-user {
+    font-size: 13px
+}
+
+@media(min-width: 767px) {
+    .bn {
+        text-align: right
+    }
+}
+
+@media(max-width: 767px) {
+    .form-check {
+        text-align: center
+    }
+
+    .bn {
+        text-align: center;
+        align-items: center
+    }
+}
+
+@media(max-width: 450px) {
+    .fab {
+        width: 100%;
+        height: 100%
+    }
+
+    .division .line {
+        width: 50%
+    }
+}
