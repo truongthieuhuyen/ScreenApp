@@ -1,5 +1,4 @@
 
-const onboardingContainer = document.querySelector(".onboarding-container");
 const steps = document.querySelectorAll(".onboarding-container .step");
 const stepsContainer = document.querySelector(".onboarding-container .steps");
 const nextBtn = document.querySelector(".onboarding-container .next-btn");
@@ -13,7 +12,6 @@ let currentStep = 0;
 
 const init = () => {
     stepsContainer.style.transition = "unset";
-    onboardingContainer.classList.add("active");
     currentStep = 0;
     stepPosition = 0;
     stepsContainer.style.transform = `translateX(-${stepPosition}px)`;
@@ -38,11 +36,13 @@ nextBtn.addEventListener("click", () => {
     stepsContainer.style.transition = "all 400ms ease";
     currentStep++;
 
-    // if(currentStep >= steps.length ){
-    //     stepsContainer.style.transition = "unset";
-    //     onboardingContainer.classList.remove("active");
-    //     currentStep = 0;
-    // }
+    if(currentStep >= steps.length ){
+        stepsContainer.style.transition = "unset";
+        onboard.classList.add("none");
+        onboard.classList.remove("flex");
+        menu.classList.remove("none");
+        menu.classList.add("flex");
+    }
 
     stepPosition += steps[0].offsetWidth + 21;
     stepsContainer.style.transform = `translateX(-${stepPosition}px)`;
