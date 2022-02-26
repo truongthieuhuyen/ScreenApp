@@ -147,16 +147,137 @@ p {
     margin-right: 9px;
 }
 
-.bn {
+.forget .bn {
     text-decoration: underline;
 }
 
-.bn:hover {
+.forget .bn:hover {
     cursor: pointer
+}
+
+.forget .btn a {
+    color: #fff;
+    width: 100%;
+}
+
+.forget .form-group {
+    margin-top: 32px;
 }
 
 .far.fa-user {
     font-size: 13px
+}
+
+.forget {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 375px;
+}
+
+.forget .popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: inherit;
+    height: 812px;
+    bottom: 0;
+    /* right: 0; */
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    transition: .6s ease-in-out;
+}
+
+.forget .popup-inner {
+    position: relative;
+    bottom: -724px;
+    display: flex;
+    flex-direction: column;
+    padding: 29px 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    /* align-items: center; */
+    max-width: 375px;
+    max-height: 812px;
+    width: 100%;
+    height: 40%;
+    background-color: #fff;
+    transition: .6s ease-in-out;
+}
+
+.forget .popup:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.forget .popup:target .popup-inner {
+    bottom: calc(812px - 130%);
+    /* right: 0; */
+    /* transform: rotate(0deg); */
+}
+
+.forget .popup .form-control:disabled, .form-control[readonly] {
+    background-color: #fff;
+}
+
+.forget .popuptext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forget .popup h4 {
+    height: 30px;
+    width: 331px;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: -0.4823530912399292px;
+
+}
+
+.forget .popup h6 {
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 1px;
+    margin: 7px auto 18px ;
+}
+
+.forget .popup p {
+    height: auto;
+    width: 309px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 17px;
+    letter-spacing: -0.3858824074268341px;
+    color: #757575;
+}
+
+.forget .closepopup {
+    position: absolute;
+    right: 0rem;
+    top: 0rem;
+    width: 2rem;
+    height: 2rem;
+    z-index: 4;
+    color: #FF6700;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.forget .closepopup:hover {
+    color: #FF6700;
 }
 
 @media(min-width: 767px) {

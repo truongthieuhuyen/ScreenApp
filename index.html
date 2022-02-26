@@ -123,8 +123,40 @@
                                     <div class="form-group">
                                         <input type="password" class="form-control" placeholder="Password" required>
                                     </div>
-                                    <div class="row">
-                                        <div class="col-md-12 col-12 bn">Forgot your password?</div>
+                                    <div class="forget">
+                                        <div class="bn">
+                                            <a href="#forget">Forgot your password?</a>
+                                        </div>
+                                        <div class="popup" id="forget">
+                                            <div class="popup-inner">
+                                                <div class="popuptext">
+                                                    <h4>Forgot password</h4>
+                                                    <p>We will send a text message with an OTP to your phone number for
+                                                        verification</p>
+                                                </div>
+                                                <div class="form-group">
+                                                  <input type="text" class="form-control" value="+84 912345678" disabled>
+                                                </div>
+                                                <button class="btn btn-orange">
+                                                    <a href="#send-mess">Send</a>
+                                                </button>
+                                                <a class="closepopup" href="#">X</a>
+                                            </div>
+                                        </div>
+                                        <div id="send-mess" class="popup">
+                                            <div class="popup-inner">
+                                                <div class="popuptext">
+                                                    <h4>Enter OTP to reset password</h4>
+                                                    <p>Please enter the 6 digit number sent to the following mobile phone</p>
+                                                    <h6>+84 912345678</h6>
+                                                </div>
+                                                
+                                                <button class="btn btn-orange">
+                                                    <a href="#">Continue</a>
+                                                </button>
+                                                <a class="closepopup" href="#">X</a>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-group mt-3">
                                         <button type="submit" class="btn btn-orange">
@@ -233,7 +265,7 @@
                     </div>
                 </form>
                 <p class="mt-3">Already have an account? <a href="#login-sec" id="login"
-                    onclick="loadSection(this.id)">Sign in</a></p>
+                        onclick="loadSection(this.id)">Sign in</a></p>
             </div>
         </section>
         <!-- Menu Profile section -->
@@ -264,9 +296,9 @@
                 </div>
 
                 <!-- Payment method -->
-                <div class="container">
-                    <a class=" transaction-btn" href="#popup">Payment</a>
-                    <div class="popup" id="popup">
+                <div class="container payment">
+                    <a class=" transaction-btn" href="#payment">Payment</a>
+                    <div class="popup" id="payment">
                         <div class="popup-inner">
                             <span>Manage payment method</span>
                             <div class="line"></div>
