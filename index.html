@@ -107,8 +107,7 @@
                                     <div class="row m-0 form-group">
                                         <div class="col-4 col-md-4 col-sm-4 ps-0 pe-1">
                                             <select class="form-select" required>
-                                                <option selected disabled value="">Select</option>
-                                                <option>+84</option>
+                                                <option selected value="">+84</option>
                                                 <option>+86</option>
                                                 <option>+44</option>
                                             </select>
@@ -135,31 +134,53 @@
                                                         verification</p>
                                                 </div>
                                                 <div class="form-group">
-                                                  <input type="text" class="form-control" value="+84 912345678" disabled>
+                                                    <input type="text" class="form-control" value="+84 912345678"
+                                                        disabled>
                                                 </div>
-                                                <button class="btn btn-orange">
+                                                <button class="btn btn-orange" type="button">
                                                     <a href="#send-mess">Send</a>
                                                 </button>
                                                 <a class="closepopup" href="#">X</a>
                                             </div>
                                         </div>
-                                        <div id="send-mess" class="popup">
+                                        <div class="popup" id="send-mess">
                                             <div class="popup-inner">
                                                 <div class="popuptext">
                                                     <h4>Enter OTP to reset password</h4>
-                                                    <p>Please enter the 6 digit number sent to the following mobile phone</p>
+                                                    <p>Please enter the 6 digit number sent to the following mobile
+                                                        phone</p>
                                                     <h6>+84 912345678</h6>
                                                 </div>
-                                                
-                                                <button class="btn btn-orange">
+                                                <div class="row otp-code">
+                                                    <div class="col-2 col-md-2 otp-number">
+                                                        <div class="boxx">2</div>
+                                                    </div>
+                                                    <div class="col-2 col-md-2 otp-number">
+                                                        <div class="boxx">2</div>
+                                                    </div>
+                                                    <div class="col-2 col-md-2 otp-number">
+                                                        <div class="boxx">2</div>
+                                                    </div>
+                                                    <div class="col-2 col-md-2 otp-number">
+                                                        <div class="boxx">2</div>
+                                                    </div>
+                                                    <div class="col-2 col-md-2 otp-number">
+                                                        <div class="boxx">2</div>
+                                                    </div>
+                                                    <div class="col-2 col-md-2 otp-number">
+                                                        <div class="boxx">2</div>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-orange" type="submit">
                                                     <a href="#">Continue</a>
                                                 </button>
                                                 <a class="closepopup" href="#">X</a>
+                                                <a href="#" id="requestNewPass">Request a new password</a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group mt-3">
-                                        <button type="submit" class="btn btn-orange">
+                                        <button type="submit" class="btn btn-orange" onclick="loadSection(this.id)" id="home">
                                             <i class="far fa-user pr-2"></i>Login
                                         </button>
                                     </div>
@@ -199,6 +220,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Sign up section -->
         <section id="signup-sec" class="none">
             <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
@@ -208,15 +230,15 @@
                     Ishare+</h4>
                 <h6>Signup to your account</h6>
 
-                <form class="row needs-validation myform" novalidate>
+                <form class="row needs-validation myform py-3 px-2" novalidate>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" id="" placeholder="First Name" required>
+                        <input type="text" class="form-control" placeholder="First Name" required>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <input type="text" class="form-control" id="" placeholder="Last Name" required>
+                        <input type="text" class="form-control" placeholder="Last Name" required>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
@@ -261,13 +283,71 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <button class=" btn-orange" type="submit">Create</button>
+                        <button class=" btn-orange" type="submit" id="verify"
+                            onclick="loadSection(this.id)">Create</button>
                     </div>
                 </form>
                 <p class="mt-3">Already have an account? <a href="#login-sec" id="login"
                         onclick="loadSection(this.id)">Sign in</a></p>
             </div>
         </section>
+
+        <!-- Verify phone number -->
+        <section id="verify-sec" class="none">
+            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
+            <div class="login">
+                <h4 class="greeting">Verify your phone number</h4>
+                <h6>We have sent you an SMS with a code to enter number</h6>
+                <div class="form-group">
+                    <input type="text" class="form-control" value="+84 912345678" disabled
+                        style="background-color: #ffffff;">
+                </div>
+                <button class="btn btn-orange" onclick="loadSection(this.id)" id="otpVerification">
+                    <a href="#" style="color: #ffffff;">Next</a>
+                </button>
+            </div>
+        </section>
+
+        <!-- OTP verification 2 -->
+        <section id="otpVerification-sec" class="none">
+            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
+            <div class="login">
+                <h4 class="greeting">Phone Verification</h4>
+                <h6>Enter your OTP code here</h6>
+                <div class="row otp-code">
+                    <div class="col-2 col-md-2 otp-number">
+                        <div class="boxx">2</div>
+                    </div>
+                    <div class="col-2 col-md-2 otp-number">
+                        <div class="boxx">2</div>
+                    </div>
+                    <div class="col-2 col-md-2 otp-number">
+                        <div class="boxx">2</div>
+                    </div>
+                    <div class="col-2 col-md-2 otp-number">
+                        <div class="boxx">2</div>
+                    </div>
+                    <div class="col-2 col-md-2 otp-number">
+                        <div class="boxx">2</div>
+                    </div>
+                    <div class="col-2 col-md-2 otp-number">
+                        <div class="boxx">2</div>
+                    </div>
+                </div>
+                <h6>Didn’t you received any code? </h6>
+                <a href="#" id="reset-code">Resent new code</a>
+                <button class="btn btn-orange" onclick="loadSection(this.id)" id="home">
+                    <a href="#" style="color: #ffffff;">Verify</a>
+                </button>
+            </div>
+        </section>
+
+        <!-- Home section -->
+        <section id="home-sec" class="none">
+            
+            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
+        </section>
+
         <!-- Menu Profile section -->
         <section id="menu-sec" class="none">
             <div class="rectangle">
@@ -387,6 +467,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Profile section -->
         <section id="profile-sec" class="none">
             <div class="status-bar">
@@ -603,6 +684,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Order section -->
         <section id="order-sec" class="none">
             <div class="status-bar">
@@ -678,6 +760,7 @@
                 </ul>
             </div>
         </section>
+
         <!-- News section -->
         <section id="news-sec" class="none">
             <div class="status-bar">
@@ -802,6 +885,7 @@
                 <h1 class="thread">Detail </h1>
             </div>
         </section>
+
         <!-- FAQs section -->
         <section id="faqs-sec" class="none">
             <div class="status-bar">
@@ -857,6 +941,7 @@
             </div>
 
         </section>
+
         <!-- Partner section -->
         <section id="partner-sec" class="none">
             <div class="status-bar">
@@ -940,6 +1025,7 @@
                 </form>
             </div>
         </section>
+
         <!-- Help section -->
         <section id="help-sec" class="none">
             <div class="status-bar">
@@ -971,6 +1057,7 @@
 
 
         </section>
+
         <!-- Terms of Service section-->
         <section id="terms-sec" class="none">
             <div class="status-bar">
@@ -1023,6 +1110,7 @@
                 </div>
             </div>
         </section>
+
         <!-- Privacy policy -->
         <section id="privacy-sec" class="none">
             <div class="status-bar">

@@ -11,8 +11,11 @@
     line-height: 30px;
     letter-spacing: -0.4823530912399292px;
     height: 60px;
-    width: 283px;
+    width: 308px;
     margin-bottom: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login h6 {
@@ -87,8 +90,8 @@ p {
     align-items: center;
 }
 
-.myform .form-group {
-    width: 100%;
+.login .form-group {
+    width: 320px;
 }
 
 .myform .form-control {
@@ -115,6 +118,7 @@ p {
 
 .myform .form-select, .form-check, .form-control {
     height: 48px;
+    border-radius: 10px;
 }
 
 .myform .form-check-input {
@@ -200,7 +204,7 @@ p {
     padding: 29px 10px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    /* align-items: center; */
+    align-items: center;
     max-width: 375px;
     max-height: 812px;
     width: 100%;
@@ -246,7 +250,7 @@ p {
     font-weight: 700;
     line-height: 30px;
     letter-spacing: 1px;
-    margin: 7px auto 18px ;
+    margin: 7px auto 18px;
 }
 
 .forget .popup p {
@@ -257,6 +261,28 @@ p {
     line-height: 17px;
     letter-spacing: -0.3858824074268341px;
     color: #757575;
+}
+
+.otp-code {
+    width: 90%;
+    align-self: center;
+    margin-bottom: 22px;
+}
+
+.otp-code .otp-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.otp-code .otp-number .boxx {
+    height: 48px;
+    width: 36px;
+    border-bottom: 1px solid black;
+
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
 }
 
 .forget .closepopup {
@@ -278,6 +304,22 @@ p {
 
 .forget .closepopup:hover {
     color: #FF6700;
+}
+
+#requestNewPass {
+    margin-top: 10px;
+    text-decoration: underline;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+}
+
+#reset-code {
+    margin-bottom: 50px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 22px;
 }
 
 @media(min-width: 767px) {
