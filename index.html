@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="onboard.css">
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="payment.css">
     <link rel="stylesheet" href="editProfile.css">
@@ -26,9 +27,11 @@
     <link rel="stylesheet" href="partner.css">
     <link rel="stylesheet" href="help.css">
 
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css"
         integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -41,7 +44,7 @@
 
     <main>
         <!-- Onboarding section -->
-        <section id="onboard-sec" class="none">
+        <section id="onboard-sec" class="flex">
             <div class="onboarding-container">
                 <div class="content">
                     <div class="rectangle--sm"></div>
@@ -93,7 +96,7 @@
                 </div>
         </section>
         <!-- Login section -->
-        <section id="login-sec" class="flex">
+        <section id="login-sec" class="none">
             <div class="login">
                 <h4 class="greeting">Welcome to <br>
                     Ishare+</h4>
@@ -186,7 +189,8 @@
                                         </div>
                                     </div>
                                     <div class="form-group mt-3">
-                                        <button type="submit" class="btn btn-orange" onclick="loadSection(this.id)" id="home">
+                                        <button type="submit" class="btn btn-orange" onclick="loadSection(this.id)"
+                                            id="home">
                                             <i class="far fa-user pr-2"></i>Login
                                         </button>
                                     </div>
@@ -350,8 +354,96 @@
 
         <!-- Home section -->
         <section id="home-sec" class="none">
-            
-            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
+            <div class="map-container">
+                <div class="mapouter">
+                    <div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0"
+                            marginwidth="0"
+                            src="https://maps.google.com/maps?width=375&amp;height=812&amp;hl=en&amp;q=54 doi can&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
+                            href="https://embedgooglemap.xyz/">embed google map</a>
+                    </div>
+                    <style>
+                        .gmnoprint {
+                            position: absolute;
+                            left: 0px;
+                            top: -590px;
+                        }
+                    </style>
+                </div>
+                <div class="search-bar">
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-sm" name="" aria-describedby="helpId"
+                            placeholder="Search map">
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="card-group">
+                        <div class="card">
+                            <img class="card-img-top" data-src="holder.js/100x180/" alt="Card image cap"
+                                src="Images/Rectangle 47.png">
+                            <div class="card-body">
+                                <a href="#">
+                                    <p>12/12/2021</p>
+                                    <h4 class="card-title">Mắt App Ishare+ </h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top" data-src="holder.js/100x180/" alt="Card image cap"
+                                src="Images/Rectangle 47.png">
+                            <div class="card-body">
+                                <a href="#">
+                                    <p>12/12/2021</p>
+                                    <h4 class="card-title">Mắt App Ishare+ </h4>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img class="card-img-top" data-src="holder.js/100x180/" alt="Card image cap"
+                                src="Images/Rectangle 47.png">
+                            <div class="card-body">
+                                <a href="#">
+                                    <p>12/12/2021</p>
+                                    <h4 class="card-title">Mắt App Ishare+ </h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-bar">
+                    <ul>
+                        <li class="nav-item">
+                            <a href="#home-sec" id="home">
+                                <img src="Images/Component/Bars/Tabs/Map.png" alt="">
+                                Map
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#store-sec" id="store">
+                                <img src="Images/Component/Bars/Tabs/Stores.png" alt="">
+                                Stores
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#scan-sec" id="scan">
+                                <img src="Images/Component/Bars/Tabs/Scan QR.png" alt="">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#noti-sec" id="noti">
+                                <img src="Images/Component/Bars/Tabs/Notifications.png" alt="">
+                                Notifications
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#menu-sec" id="menu" onclick="loadSection(this.id)">
+                                <img src="Images/Component/Bars/Tabs/Profile.png" alt="">
+                                Profile
+                            </a>
+                        </li>
+                    </ul>
+                    <img src="Images/Component/Bars/Tabs/Rectangle 24.jpg" alt="" class="navigation">
+                </div>
+            </div>
         </section>
 
         <!-- Menu Profile section -->

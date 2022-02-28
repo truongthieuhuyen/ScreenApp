@@ -30,7 +30,7 @@ const nextBtn = document.querySelector(".onboarding-container .next-btn");
 const dots = document.querySelectorAll(".onboarding-container .dot");
 const skipBtn = document.querySelector(".onboarding-container .skip-btn");
 const onboard = document.getElementById("onboard-sec");
-const menu = document.getElementById("menu-sec");
+const login = document.getElementById("login-sec");
 
 let stepPosition = 0;
 let currentStep = 0;
@@ -53,8 +53,8 @@ const init = () => {
 skipBtn.addEventListener("click", () => {
     onboard.classList.add("none");
     onboard.classList.remove("flex");
-    menu.classList.remove("none");
-    menu.classList.add("flex");
+    login.classList.remove("none");
+    login.classList.add("flex");
 });
 
 nextBtn.addEventListener("click", () => {
@@ -65,8 +65,8 @@ nextBtn.addEventListener("click", () => {
         stepsContainer.style.transition = "unset";
         onboard.classList.add("none");
         onboard.classList.remove("flex");
-        menu.classList.remove("none");
-        menu.classList.add("flex");
+        login.classList.remove("none");
+        login.classList.add("flex");
     }
 
     stepPosition += steps[0].offsetWidth + 21;

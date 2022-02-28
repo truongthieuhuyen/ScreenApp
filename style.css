@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 :root {
+    display: flex;
+    justify-content: center;
+}
+
+body {
     width: 375px;
     height: 812px;
 }
@@ -51,7 +56,7 @@ a:hover {
 
 .flex {
     display: flex;
-    flex-direction: column ;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -125,11 +130,12 @@ a:hover {
 
 
 .btn-back {
-    position: absolute;
+    position: relative;
+    right: 42%;
     height: 24px;
     width: 24px;
-    left: 20px;
-    top: 49px;
+    /* left: 20px;
+    top: 49px; */
     background-image: url('Images/Symbols/icon-back.png');
 }
 
