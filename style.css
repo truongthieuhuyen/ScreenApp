@@ -55,10 +55,11 @@ a:hover {
 } */
 
 .flex {
+    height: 812px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .none {
@@ -102,24 +103,12 @@ a:hover {
 
 }
 
-.rectangle {
-    position: absolute;
-    background-image: url("Images/background.png");
-    height: 348px;
-    width: 375px;
-    left: 0px;
-    top: 0px;
-    background-position: left;
-    background-size: cover;
-}
-
 .thread {
     font-size: 30px;
-    position: absolute;
+    position: relative;
     height: auto;
-    width: auto;
-    left: 10px;
-    top: 78px;
+    width: 355px;
+    /* top: 44px; */
     text-align: left;
 }
 
@@ -134,8 +123,8 @@ a:hover {
     right: 42%;
     height: 24px;
     width: 24px;
-    /* left: 20px;
-    top: 49px; */
+    /* left: 20px; */
+    /* top: 40px; */
     background-image: url('Images/Symbols/icon-back.png');
 }
 

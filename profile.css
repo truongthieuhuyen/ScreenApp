@@ -1,3 +1,14 @@
+.rectangle {
+    position: relative;
+    background-image: url("Images/background.png");
+    height: 348px;
+    width: 375px;
+    left: 0px;
+    top: 0px;
+    background-position: left;
+    background-size: cover;
+}
+
 .represent {
     position: absolute;
     display: flex;
@@ -112,9 +123,9 @@
     height: 614px;
     width: 375px;
     left: 0px;
-    top: 348px;
+    top: 0px;
     background: #F6F6F6;
-    position: absolute;
+    position: relative;
 }
 
 .menu-item {

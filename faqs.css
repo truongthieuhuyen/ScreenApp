@@ -20,7 +20,7 @@
     text-align: left;
     background: #ECF0F3;
     color: black;
-
+    width: inherit;
 }
 
 .below .card-header {
@@ -31,6 +31,7 @@
 .below .card-body {
     border-radius: 20px;
     margin-top: 7px;
+    padding: .75rem 1.25rem;
 }
 
 .below .card-header a {

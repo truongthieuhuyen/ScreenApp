@@ -51,6 +51,8 @@
 .onboarding-container .content {
     max-width: 375px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .steps {
@@ -119,11 +121,11 @@
 
 .onboarding-container .skip-btn {
     text-decoration: underline;
-    position: absolute;
+    position: relative;
     height: 24px;
     width: 57px;
     left: 159px;
-    top: 744px;
+    top: 5px;
     font-size: 14px;
     font-weight: 500;
     color: black;
