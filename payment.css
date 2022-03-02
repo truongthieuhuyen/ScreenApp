@@ -71,21 +71,6 @@
     color: #FF6700;
 }
 
-.line {
-    width: 355px;
-    height: 1px;
-    background: #c4c4c4;
-    margin-top: 24px;
-}
-
-.full-line {
-    /* width: 375px; */
-    height: 3px;
-    background: #c4c4c4;
-    margin-top: 15px;
-    margin-bottom: 9px;
-}
-
 .payment .form-check {
     display: flex;
     align-items: center;

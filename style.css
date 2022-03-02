@@ -112,6 +112,16 @@ a:hover {
     text-align: left;
 }
 
+.sub-thread {
+    position: relative;
+    height: auto;
+    width: 355px;
+    /* left: 10px; */
+    /* top: 165px; */
+    text-align: left;
+    line-height: 17px;
+}
+
 .below {
     position: absolute;
     top: 247px;
@@ -124,7 +134,7 @@ a:hover {
     height: 24px;
     width: 24px;
     /* left: 20px; */
-    /* top: 40px; */
+    margin-top: 40px;
     background-image: url('Images/Symbols/icon-back.png');
 }
 
@@ -142,4 +152,27 @@ a:hover {
     /* position: relative;
     bottom: 0px; */
     align-self: center;
+}
+
+.line {
+    width: initial;
+    height: 1px;
+    background: #c4c4c4;
+    margin-top: 24px;
+}
+
+.full-line {
+    /* width: 375px; */
+    height: 3px;
+    background: #c4c4c4;
+    margin-top: 15px;
+    margin-bottom: 9px;
+}
+
+.dash-line {
+    border-bottom: 1px dashed #C4C4C4;
+    width: 282px;
+    height: 1px;
+    position: relative;
+    top: 3px;
 }

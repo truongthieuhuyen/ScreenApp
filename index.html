@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="onboard.css">
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="loacation.css">
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="payment.css">
     <link rel="stylesheet" href="editProfile.css">
@@ -28,8 +29,9 @@
     <link rel="stylesheet" href="help.css">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css"
-        integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg=="
+    <link rel="stylesheet" href="https://use.fontawesome.com/84f018e0ef.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,13 +40,11 @@
 </head>
 
 <body style="background-color:#ffffff;">
-    <header>
-
-    </header>
+    <header></header>
 
     <main>
         <!-- Onboarding section -->
-        <section id="onboard-sec" class="flex">
+        <section id="onboard-sec" class="none">
             <div class="onboarding-container">
                 <div class="content">
                     <div class="rectangle--sm"></div>
@@ -95,6 +95,7 @@
                     <a href="#" class="skip-btn">Skip</a>
                 </div>
         </section>
+
         <!-- Login section -->
         <section id="login-sec" class="none">
             <div class="login">
@@ -357,55 +358,63 @@
         </section>
 
         <!-- Home section -->
-        <section id="home-sec" class="none">
+        <section id="home-sec" class="flex">
             <div class="map-container">
                 <div class="mapouter">
-                    <div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0"
-                            marginwidth="0"
-                            src="https://maps.google.com/maps?width=375&amp;height=812&amp;hl=en&amp;q=54 doi can&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
-                            href="https://embedgooglemap.xyz/">embed google map</a>
+                    <div class="gmap_canvas">
+                        <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                            src="https://maps.google.com/maps?width=375&amp;height=812&amp;hl=en&amp;q=54 doi can&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                        </iframe>
+                        <a href="https://embedgooglemap.xyz/">embed google map</a>
                     </div>
                 </div>
+                <!-- Search bar -->
                 <div class="search-bar">
                     <div class="form-group">
                         <input type="text" class="form-control form-control-sm" name="" aria-describedby="helpId"
                             placeholder="Search map">
                     </div>
                 </div>
+                <!-- Slide layer -->
                 <div class="slide">
                     <div class="card-group">
                         <div class="card">
-                            <img class="card-img-top" data-src="holder.js/100x180/" alt="Card image cap"
-                                src="Images/Rectangle 47.png">
+                            <img class="card-img-top" data-src="" alt="" src="Images/Lotte.png">
                             <div class="card-body">
-                                <a href="#">
-                                    <p>12/12/2021</p>
-                                    <h4 class="card-title">Mắt App Ishare+ </h4>
+                                <a href="#location-sec" onclick="loadSection(this.id)" id="location">
+                                    <h4 class="card-title">Lotte center</h4>
+                                    <p>54 Liễu Giai, quận Ba Đình, Hà Nội</p>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <img class="card-status" src="Images/Component/Opening.png" alt="">
                                 </a>
                             </div>
                         </div>
                         <div class="card">
-                            <img class="card-img-top" data-src="holder.js/100x180/" alt="Card image cap"
-                                src="Images/Rectangle 47.png">
+                            <img class="card-img-top" data-src="" alt="" src="Images/Lotte.png">
                             <div class="card-body">
-                                <a href="#">
-                                    <p>12/12/2021</p>
-                                    <h4 class="card-title">Mắt App Ishare+ </h4>
+                                <a href="#location-sec" onclick="loadSection(this.id)" id="location">
+                                    <h4 class="card-title">Lotte center</h4>
+                                    <p>54 Liễu Giai, quận Ba Đình, Hà Nội</p>
+                                    <i class="fas fa-map-marker-alt">
+                                        2km</i>
+                                    <img class="card-status" src="Images/Component/Opening.png" alt="">
                                 </a>
                             </div>
                         </div>
                         <div class="card">
-                            <img class="card-img-top" data-src="holder.js/100x180/" alt="Card image cap"
-                                src="Images/Rectangle 47.png">
+                            <img class="card-img-top" data-src="" alt="" src="Images/Lotte.png">
                             <div class="card-body">
-                                <a href="#">
-                                    <p>12/12/2021</p>
-                                    <h4 class="card-title">Mắt App Ishare+ </h4>
+                                <a href="#location-sec" onclick="loadSection(this.id)" id="location">
+                                    <h4 class="card-title">Lotte center</h4>
+                                    <p>54 Liễu Giai, quận Ba Đình, Hà Nội</p>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <img class="card-status" src="Images/Component/Opening.png" alt="">
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Nav-bar -->
                 <div class="nav-bar">
                     <ul>
                         <li class="nav-item">
@@ -421,8 +430,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#scan-sec" id="scan">
-                                <img src="Images/Component/Bars/Tabs/Scan QR.png" alt="">
+                            <a href="#scan-sec">
+                                <img src="Images/Component/Bars/Tabs/Scan QR.png" alt="" onclick="loadSection(this.id)"
+                                    id="scan">
                             </a>
                         </li>
                         <li class="nav-item">
@@ -432,8 +442,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#menu-sec" id="menu" >
-                                <img src="Images/Component/Bars/Tabs/Profile.png" alt="" onclick="loadSection(this.id)" id="menu">
+                            <a href="#menu-sec" id="menu">
+                                <img src="Images/Component/Bars/Tabs/Profile.png" alt="" onclick="loadSection(this.id)"
+                                    id="menu">
                                 Profile
                             </a>
                         </li>
@@ -443,6 +454,148 @@
             </div>
         </section>
 
+        <!-- Location section -->
+        <section id="location-sec" class="none">
+            <a href="#home-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="home"></a>
+            <h1 class="thread">Lotte center</h1>
+            <h6 class="sub-thread">54 Liễu Giai, quận Ba Đình, Hà Nội</h6>
+
+            <div class="location-container">
+                <img src="Images/Picture 509.png" alt="">
+                <div class="location-status-bar">
+                    <div class="status">
+                        <img src="Images/Component/Opening.png" alt="">
+                    </div>
+                    <p class="status-time">
+                        <i class="fas fa-clock"></i>
+                        08:00 - 23:00
+                    </p>
+                </div>
+                <div class="mini-map">
+                    <iframe width="100%" height="100%" style="border:0; border-radius: 10px;" loading="lazy"
+                        allowfullscreen
+                        src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJPXXs0yhVNDERdodfojIB8A0&destination=place_id:ChIJD1MLjmyrNTERHwGI5kbt_Hs&key=AIzaSyDgJibLPJ6Lbu9Mq76Lv6Re77EKXND3NzQ&zoom=11">
+                    </iframe>
+                </div>
+                <div class="line" style="margin: 0;"></div>
+                <div class="location-info">
+                    <ul>
+                        <li class="location-item">
+                            <div class="location-item-img" style="background-color: #ECF0F3;">
+                                <img src="Images/Symbols/Price.png" alt="">
+                            </div>
+                            <div class="location-item-text">
+                                <p>0 VND/ 1 hour</p>
+                                <p>Free for first rental</p>
+                            </div>
+                        </li>
+                        <li class="location-item">
+                            <div class="location-item-img" style="background-color: #E7FFED;">
+                                <img src="Images/Symbols/Power.png" alt="">
+                            </div>
+                            <div class="location-item-text">
+                                <p>10 powers</p>
+                                <p>Scan the QR code to get the power</p>
+                            </div>
+                        </li>
+                        <li class="location-item">
+                            <div class="location-item-img" style="background-color: #F8E4FF;">
+                                <img src="Images/Symbols/Slot.png" alt="">
+                            </div>
+                            <div class="location-item-text">
+                                <p>Remaining 5 slot space</p>
+                                <p>Return power to the charging station and charge a deposit</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#qr-detail-sec" onclick="loadSection(this.id)" id="qr-detail">
+                    <img src="Images/Component/Bars/Tabs/Scan QR.png" alt="">
+                </a>
+            </div>
+        </section>
+
+        <!-- QR infomations section -->
+        <section id="qr-detail-sec" class="none">
+            <a href="#location-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="location"></a>
+            <a href="#home-sec" onclick="loadSection(this.id)" id="home">
+                <i class="fas fa-times fa-2x"></i>
+            </a>
+            <h1 class="thread"> QR Information</h1>
+
+            <div class="ticket">
+                <div class="ticket-header"></div>
+                <div class="ticket-logo">LOGO</div>
+                <h6>For your safety, we need you to confirm the information below before proceeding with the payment
+                </h6>
+                <div class="dash-line"></div>
+                <div class="ticket-info">
+                    <div class="row">
+                        <div class="col-4 col-md-4 col-sm-4">
+                            Account code:
+                        </div>
+                        <div class="col-8 col-md-8 col-sm-8">
+                            #123456
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 col-md-4 col-sm-4">
+                            Location:
+                        </div>
+                        <div class="col-8 col-md-8 col-sm-8">
+                            54 Liễu Giai, Ba Đình, Hà Nội
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 col-md-4 col-sm-4">
+                            Amount:
+                        </div>
+                        <div class="col-8 col-md-8 col-sm-8 amount">
+                            01
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="row">
+                        <div class="col-4 col-md-4 col-sm-4">
+                            Total payment:
+                        </div>
+                        <div class="col-8 col-md-8 col-sm-8" style="font-size: 14px;">
+                            $10
+                        </div>
+                    </div>
+                </div>
+                <div class="division">
+                    <div class="w-100">
+                        <div class="mb-4">
+                            <span>
+                                By “Verify”, you are also agreeing to
+                                <a href="#privacy-sec" id="privacy" onclick="loadSection(this.id)">Privacy policy</a>
+                                and
+                                <a href="#terms-sec" id="terms" onclick="loadSection(this.id)">Term of
+                                    Service</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-orange" type="button">Verify</button>
+            </div>
+        </section>
+        <!-- Stores section -->
+
+        <!-- Scan QR -->
+        <section id="scan-sec" class="none">
+            <div class="scan-container">
+                <a href="#home-sec" onclick="loadSection(this.id)" id="home">
+                    <i class="fas fa-times fa-3x"></i>
+                </a>
+                <div class="scan-rectangle"></div>
+                <span>Please scan the QR code on the screen of the charging station</span>
+            </div>
+        </section>
+        <!-- Notifications section -->
+        <section id="noti-sec" class="none">
+
+        </section>
         <!-- Menu Profile section -->
         <section id="menu-sec" class="none">
             <div class="rectangle">
@@ -576,7 +729,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
+            <a href="" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
             <h1 class="thread">My Profile</h1>
 
             <div class="row m-0" style="position: absolute; top: 136px;">
@@ -793,7 +946,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
+            <a href="" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
             <h1 class="thread">Order</h1>
 
             <div class="box">
@@ -869,7 +1022,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
+            <a href="" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
             <h1 class="thread">News</h1>
             <a href="#" class="more">Xem thêm</a>
 
@@ -994,7 +1147,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
+            <a href="" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
             <h1 class="thread">Frequently Asked Questions</h1>
             <div class="sub-thread">
                 <h6>Frequently asked questions and feedback</h6>
@@ -1050,7 +1203,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
+            <a href="" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
             <h1 class="thread">Become Our Partner</h1>
             <div class="sub-thread">
                 <h6>Please fill in the form below, we will call you shortly!</h6>
@@ -1134,7 +1287,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
+            <a href="" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
             <h1 class="thread">Help Center</h1>
 
             <div class="below">
@@ -1166,7 +1319,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
+            <a href="" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="help"></a>
 
             <div class="help-item">
                 <div style="width: 355px;">
@@ -1219,7 +1372,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
+            <a href="" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="help"></a>
 
             <div class="help-item">
                 <div style="width: 355px;">
@@ -1266,8 +1419,7 @@
 
     </main>
 
-    <footer>
-    </footer>
+    <footer></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

@@ -126,12 +126,14 @@
     top: 0px;
     background: #F6F6F6;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 32px 29px;
 }
 
 .menu-item {
     display: flex;
-    padding-top: 32px;
-    padding-left: 29px;
 }
 
 .menu-item a {
