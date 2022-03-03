@@ -22,17 +22,23 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    margin-bottom: 0;
 }
 
 .location-container .mini-map {
     height: 100px;
-    width: 336px;
+    width: 335px;
     border-radius: 10px;
+}
 
+.mini-map a {
+    position: relative;
+    top: -64px;
+    float: right;
 }
 
 .location-info {
-    width: 355px;
+    width: 335px;
     height: auto;
 }
 
@@ -63,6 +69,10 @@
 .location-info .location-item-text {
     width: 260px;
     align-self: center;
+}
+
+.location-info .location-item-text p {
+    margin: 0;
 }
 
 .location-info .location-item-text p:nth-child(2) {
@@ -185,9 +195,11 @@
     color: #FF6700;
     margin-left: 10px;
 }
-.ticket .division{
+
+.ticket .division {
     margin-top: 180px;
 }
-.ticket .division a{
+
+.ticket .division a {
     color: #FF6700;
 }

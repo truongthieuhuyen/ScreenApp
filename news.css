@@ -1,7 +1,7 @@
 #news-sec .more {
     position: absolute;
     left: calc(50% - 75px /2 + 140px);
-    top: 94px;
+    top: 121px;
     color: black;
     font-size: 14px;
     line-height: 17px;
@@ -9,9 +9,11 @@
     letter-spacing: -0.385882px;
     text-decoration: underline;
 }
-#news-sec .more:active,.more:hover{
+
+#news-sec .more:active, .more:hover {
     color: black;
 }
+
 #news-sec .card:hover, .card:active {
     box-shadow: 5px 5px 6px 0px #DADADA;
     transition: ease all 0.5s;
@@ -22,11 +24,10 @@
 }
 
 #news-sec .slide {
-    position: absolute;
+    position: relative;
     height: 216px;
     width: 355px;
-    left: 10px;
-    top: 138px;
+    top: 35px;
     overflow: auto;
 }
 

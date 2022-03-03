@@ -46,9 +46,8 @@
 }
 
 .card {
-    border: none;
+    border: none !important;
     align-items: center;
-
 }
 
 p {
@@ -170,7 +169,7 @@ p {
     margin-top: 32px;
 }
 
-.far.fa-user {
+.forget .far.fa-user {
     font-size: 13px
 }
 

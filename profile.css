@@ -1,3 +1,6 @@
+.menu-container{
+    height: calc(812px - 100px);
+}
 .rectangle {
     position: relative;
     background-image: url("Images/background.png");
@@ -120,8 +123,9 @@
 }
 
 .profile-menu {
-    height: 614px;
+    height: calc(812px - 348px - 100px);
     width: 375px;
+    overflow-y: overlay;
     left: 0px;
     top: 0px;
     background: #F6F6F6;

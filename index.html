@@ -8,17 +8,13 @@
     <title>IShare</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
-        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="application/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="onboard.css">
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="loacation.css">
+    <link rel="stylesheet" href="store.css">
+    <link rel="stylesheet" href="notification.css">
     <link rel="stylesheet" href="profile.css">
     <link rel="stylesheet" href="payment.css">
     <link rel="stylesheet" href="editProfile.css">
@@ -28,12 +24,21 @@
     <link rel="stylesheet" href="partner.css">
     <link rel="stylesheet" href="help.css">
 
+    <!-- Boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="application/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/84f018e0ef.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
@@ -190,7 +195,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group mt-3">
-                                        <button type="submit" class="btn btn-orange" onclick="loadSection(this.id)"
+                                        <button type="submit" class="btn-orange" onclick="loadSection(this.id)"
                                             id="home">
                                             <i class="far fa-user pr-2"></i>Login
                                         </button>
@@ -296,7 +301,7 @@
                                 </div>
                             </div>
                             <div class="col-12 col-md-12">
-                                <button class=" btn-orange" type="submit" id="verify"
+                                <button class="btn-orange" type="submit" id="verify"
                                     onclick="loadSection(this.id)">Create</button>
                             </div>
                         </div>
@@ -418,14 +423,14 @@
                 <div class="nav-bar">
                     <ul>
                         <li class="nav-item">
-                            <a href="#home-sec" id="home">
-                                <img src="Images/Component/Bars/Tabs/Map.png" alt="">
+                            <a href="#home-sec" id="home" class="active">
+                                <i class="fas fa-map"></i>
                                 Map
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#store-sec" id="store">
-                                <img src="Images/Component/Bars/Tabs/Stores.png" alt="">
+                            <a href="#stores-sec" id="stores" onclick="loadSection(this.id)">
+                                <i class="fas fa-store-alt"></i>
                                 Stores
                             </a>
                         </li>
@@ -436,15 +441,14 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#noti-sec" id="noti">
-                                <img src="Images/Component/Bars/Tabs/Notifications.png" alt="">
+                            <a href="#noti-sec" id="noti" onclick="loadSection(this.id)">
+                                <i class="bi bi-app-indicator"></i>
                                 Notifications
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#menu-sec" id="menu">
-                                <img src="Images/Component/Bars/Tabs/Profile.png" alt="" onclick="loadSection(this.id)"
-                                    id="menu">
+                            <a href="#menu-sec" id="menu" onclick="loadSection(this.id)">
+                                <i class="far fa-user"></i>
                                 Profile
                             </a>
                         </li>
@@ -456,7 +460,17 @@
 
         <!-- Location section -->
         <section id="location-sec" class="none">
-            <a href="#home-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="home"></a>
+            <div class="status-bar">
+                <div class="status-time">
+                    <p>9:41</p>
+                </div>
+                <div class="status-icon">
+                    <img src="Images/Component/Bars/Status/Wi-Fi.png" alt="">
+                    <img src="Images/Component/Bars/Status/Combined Shape.png" alt="">
+                    <img src="Images/Component/Bars/Status/Battery.png" alt="">
+                </div>
+            </div>
+            <a href="#home-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="stores"></a>
             <h1 class="thread">Lotte center</h1>
             <h6 class="sub-thread">54 Liễu Giai, quận Ba Đình, Hà Nội</h6>
 
@@ -476,6 +490,9 @@
                         allowfullscreen
                         src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJPXXs0yhVNDERdodfojIB8A0&destination=place_id:ChIJD1MLjmyrNTERHwGI5kbt_Hs&key=AIzaSyDgJibLPJ6Lbu9Mq76Lv6Re77EKXND3NzQ&zoom=11">
                     </iframe>
+                    <a href="#direction-sec" id="direction" onclick="loadSection(this.id)">
+                        <img src="Images/Symbols/Direct.png" alt="">
+                    </a>
                 </div>
                 <div class="line" style="margin: 0;"></div>
                 <div class="location-info">
@@ -515,8 +532,25 @@
             </div>
         </section>
 
+        <!-- Direction section -->
+        <section id="direction" class="none">
+            <div class="status-bar">
+                <div class="status-time">
+                    <p>9:41</p>
+                </div>
+                <div class="status-icon">
+                    <img src="Images/Component/Bars/Status/Wi-Fi.png" alt="">
+                    <img src="Images/Component/Bars/Status/Combined Shape.png" alt="">
+                    <img src="Images/Component/Bars/Status/Battery.png" alt="">
+                </div>
+            </div>
+
+            <a href="#location-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="location"></a>
+        </section>
+
         <!-- QR infomations section -->
         <section id="qr-detail-sec" class="none">
+            <div class="space"></div>
             <a href="#location-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="location"></a>
             <a href="#home-sec" onclick="loadSection(this.id)" id="home">
                 <i class="fas fa-times fa-2x"></i>
@@ -577,10 +611,166 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-orange" type="button">Verify</button>
+                <button class="btn-orange" type="button">Verify</button>
             </div>
         </section>
+
         <!-- Stores section -->
+        <section id="stores-sec" class="none">
+            <div class="status-bar">
+                <div class="status-time">
+                    <p>9:41</p>
+                </div>
+                <div class="status-icon">
+                    <img src="Images/Component/Bars/Status/Wi-Fi.png" alt="">
+                    <img src="Images/Component/Bars/Status/Combined Shape.png" alt="">
+                    <img src="Images/Component/Bars/Status/Battery.png" alt="">
+                </div>
+            </div>
+            <h1 class="thread">Stores</h1>
+
+            <div class="stores-container">
+                <ul class="stores-list">
+                    <li class="store">
+                        <a href="#location-sec" onclick="loadSection(this.id)" id="location">
+                            <img class="store-img" src="Images/Lotte.png" alt="">
+                            <div class="store-body">
+                                <h4 class="store-title">Lotte center</h4>
+                                <p>54 Liễu Giai, quận Ba Đình, Hà Nội</p>
+                                <span>
+                                    <i class="fas fa-map-marker-alt"></i>2 km
+                                </span>
+                                <div class="store-status">
+                                    <img src="Images/Component/Opening.png" alt="">
+                                    <i class="fas fa-clock"></i>
+                                    08:00 - 23:00
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="store">
+                        <a href="#location-sec" onclick="loadSection(this.id)" id="location">
+                            <img class="store-img" src="Images/Lotte.png" alt="">
+                            <div class="store-body">
+                                <h4 class="store-title">Lotte center</h4>
+                                <p>54 Liễu Giai, quận Ba Đình, Hà Nội</p>
+                                <span>
+                                    <i class="fas fa-map-marker-alt"></i>2 km
+                                </span>
+                                <div class="store-status">
+                                    <img src="Images/Component/Opening.png" alt="">
+                                    <i class="fas fa-clock"></i>
+                                    08:00 - 23:00
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="store">
+                        <a href="#location-sec" onclick="loadSection(this.id)" id="location">
+                            <img class="store-img" src="Images/Lotte.png" alt="">
+                            <div class="store-body">
+                                <h4 class="store-title">Lotte center</h4>
+                                <p>54 Liễu Giai, quận Ba Đình, Hà Nội</p>
+                                <span>
+                                    <i class="fas fa-map-marker-alt"></i>2 km
+                                </span>
+                                <div class="store-status">
+                                    <img src="Images/Component/Opening.png" alt="">
+                                    <i class="fas fa-clock"></i>
+                                    08:00 - 23:00
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="store">
+                        <a href="#location-sec" onclick="loadSection(this.id)" id="location">
+                            <img class="store-img" src="Images/Lotte.png" alt="">
+                            <div class="store-body">
+                                <h4 class="store-title">Lotte center</h4>
+                                <p>54 Liễu Giai, quận Ba Đình, Hà Nội</p>
+                                <span>
+                                    <i class="fas fa-map-marker-alt"></i>2 km
+                                </span>
+                                <div class="store-status">
+                                    <img src="Images/Component/Opening.png" alt="">
+                                    <i class="fas fa-clock"></i>
+                                    08:00 - 23:00
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="store">
+                        <a href="#location-sec" onclick="loadSection(this.id)" id="location">
+                            <img class="store-img" src="Images/Lotte.png" alt="">
+                            <div class="store-body">
+                                <h4 class="store-title">Lotte center</h4>
+                                <p>54 Liễu Giai, quận Ba Đình, Hà Nội</p>
+                                <span>
+                                    <i class="fas fa-map-marker-alt"></i>2 km
+                                </span>
+                                <div class="store-status">
+                                    <img src="Images/Component/Opening.png" alt="">
+                                    <i class="fas fa-clock"></i>
+                                    08:00 - 23:00
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="store">
+                        <a href="#location-sec" onclick="loadSection(this.id)" id="location">
+                            <img class="store-img" src="Images/Lotte.png" alt="">
+                            <div class="store-body">
+                                <h4 class="store-title">Lotte center</h4>
+                                <p>54 Liễu Giai, quận Ba Đình, Hà Nội</p>
+                                <span>
+                                    <i class="fas fa-map-marker-alt"></i>2 km
+                                </span>
+                                <div class="store-status">
+                                    <img src="Images/Component/Opening.png" alt="">
+                                    <i class="fas fa-clock"></i>
+                                    08:00 - 23:00
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Nav-bar -->
+                <div class="nav-bar">
+                    <ul>
+                        <li class="nav-item">
+                            <a href="#home-sec" id="home" onclick="loadSection(this.id)">
+                                <i class="fas fa-map"></i>
+                                Map
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#stores-sec" id="stores" onclick="loadSection(this.id)">
+                                <i class="fas fa-store-alt"></i>
+                                Stores
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#scan-sec" onclick="loadSection(this.id)" id="scan">
+                                <img src="Images/Component/Bars/Tabs/Scan QR.png" alt="">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#noti-sec" id="noti" onclick="loadSection(this.id)">
+                                <i class="bi bi-app-indicator"></i>
+                                Notifications
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#menu-sec" id="menu" onclick="loadSection(this.id)">
+                                <i class="far fa-user"></i>
+                                Profile
+                            </a>
+                        </li>
+                    </ul>
+                    <img src="Images/Component/Bars/Tabs/Rectangle 24.jpg" alt="" class="navigation">
+                </div>
+            </div>
+        </section>
 
         <!-- Scan QR -->
         <section id="scan-sec" class="none">
@@ -592,127 +782,275 @@
                 <span>Please scan the QR code on the screen of the charging station</span>
             </div>
         </section>
+
         <!-- Notifications section -->
         <section id="noti-sec" class="none">
-
+            <div class="status-bar">
+                <div class="status-time">
+                    <p>9:41</p>
+                </div>
+                <div class="status-icon">
+                    <img src="Images/Component/Bars/Status/Wi-Fi.png" alt="">
+                    <img src="Images/Component/Bars/Status/Combined Shape.png" alt="">
+                    <img src="Images/Component/Bars/Status/Battery.png" alt="">
+                </div>
+            </div>
+            <h1 class="thread">Notifications</h1>
+            <h6 class="sub-thread">Your most recent news</h6>
+            <button id="readAll" type="button">
+                Read all
+            </button>
+            <div class="noti-container">
+                <ul class="noti-list">
+                    <li class="noti">
+                        <img src="Images/Symbols/Avatar notifications.png" alt="">
+                        <div class="noti-textbox">
+                            <h4>Lorem ipsum</h4>
+                            <p>This must be it illustration design done in adobe illustrator.</p>
+                            <p>12:00 12/12/2021</p>
+                        </div>
+                    </li>
+                    <li class="noti">
+                        <img src="Images/Symbols/Avatar notifications.png" alt="">
+                        <div class="noti-textbox">
+                            <h4>Lorem ipsum</h4>
+                            <p>This must be it illustration design done in adobe illustrator.</p>
+                            <p>12:00 12/12/2021</p>
+                        </div>
+                    </li>
+                    <li class="noti">
+                        <img src="Images/Symbols/Avatar notifications.png" alt="">
+                        <div class="noti-textbox">
+                            <h4>Lorem ipsum</h4>
+                            <p>This must be it illustration design done in adobe illustrator.</p>
+                            <p>12:00 12/12/2021</p>
+                        </div>
+                    </li>
+                    <li class="noti">
+                        <img src="Images/Symbols/Avatar notifications.png" alt="">
+                        <div class="noti-textbox">
+                            <h4>Lorem ipsum</h4>
+                            <p>This must be it illustration design done in adobe illustrator.</p>
+                            <p>12:00 12/12/2021</p>
+                        </div>
+                    </li>
+                    <li class="noti">
+                        <img src="Images/Symbols/Avatar notifications.png" alt="">
+                        <div class="noti-textbox">
+                            <h4>Lorem ipsum</h4>
+                            <p>This must be it illustration design done in adobe illustrator.</p>
+                            <p>12:00 12/12/2021</p>
+                        </div>
+                    </li>
+                    <li class="noti">
+                        <img src="Images/Symbols/Avatar notifications.png" alt="">
+                        <div class="noti-textbox">
+                            <h4>Lorem ipsum</h4>
+                            <p>This must be it illustration design done in adobe illustrator.</p>
+                            <p>12:00 12/12/2021</p>
+                        </div>
+                    </li>
+                    <li class="noti">
+                        <img src="Images/Symbols/Avatar notifications.png" alt="">
+                        <div class="noti-textbox">
+                            <h4>Lorem ipsum</h4>
+                            <p>This must be it illustration design done in adobe illustrator.</p>
+                            <p>12:00 12/12/2021</p>
+                        </div>
+                    </li>
+                </ul>
+                <!-- Nav-bar -->
+                <div class="nav-bar">
+                    <ul>
+                        <li class="nav-item">
+                            <a href="#home-sec" id="home" onclick="loadSection(this.id)">
+                                <i class="fas fa-map"></i>
+                                Map
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#stores-sec" id="stores" onclick="loadSection(this.id)">
+                                <i class="fas fa-store-alt"></i>
+                                Stores
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#scan-sec" onclick="loadSection(this.id)" id="scan">
+                                <img src="Images/Component/Bars/Tabs/Scan QR.png" alt="">
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#noti-sec" id="noti" onclick="loadSection(this.id)">
+                                <i class="bi bi-app-indicator"></i>
+                                Notifications
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#menu-sec" id="menu" onclick="loadSection(this.id)">
+                                <i class="far fa-user"></i>
+                                Profile
+                            </a>
+                        </li>
+                    </ul>
+                    <img src="Images/Component/Bars/Tabs/Rectangle 24.jpg" alt="" class="navigation">
+                </div>
+            </div>
         </section>
+        <div class=""></div>
         <!-- Menu Profile section -->
         <section id="menu-sec" class="none">
-            <div class="rectangle">
-                <div class="status-bar">
-                    <div class="status-time">
-                        <p>9:41</p>
-                    </div>
-                    <div class="status-icon">
-                        <img src="Images/Component/Bars/Status/Wi-Fi.png" alt="">
-                        <img src="Images/Component/Bars/Status/Combined Shape.png" alt="">
-                        <img src="Images/Component/Bars/Status/Battery.png" alt="">
-                    </div>
-                </div>
-                <div class="represent">
-                    <img class="represent-avatar" src="Images/Symbols/Avatar profile.png" alt="">
-                    <div>
-                        <p class="represent-name m-0">Lorem Ipsum</p>
-                        <p class="represent-phone m-0">(+84) 912345678</p>
-                    </div>
-                </div>
-                <div class="represent-under">
-                    <div class="transaction">
-                        <p class="m-0">Transaction history</p>
-                        <p class="transaction-times m-0">15 times</p>
-                    </div>
-                </div>
-
-                <!-- Payment method -->
-                <div class="container payment">
-                    <a class=" transaction-btn" href="#payment">Payment</a>
-                    <div class="popup" id="payment">
-                        <div class="popup-inner">
-                            <span>Manage payment method</span>
-                            <div class="line"></div>
-                            <p>Add methods</p>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1">
-                                <img src="Images/Symbols/ZaloPay-logo 1.png" alt="" style="padding: 6.5px;">
-                                <label class="form-check-label" for="flexRadioDefault1">
-                                    Thanh toán bằng ví điện tử ZaloPay
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2">
-                                <img src="Images/Symbols/momo 1.png" alt="">
-                                <label class="form-check-label" for="flexRadioDefault2">
-                                    Thanh toán bằng ví điện tử MoMo
-                                </label>
-                            </div>
-                            <div class="full-line"></div>
-                            <p>Other payment method(s)</p>
-                            <button class="btn other-method px-0" type="button">
-                                <img src="Images/Symbols/Price.png" alt="" style="width: 21px; height: 15px;">
-                                <div>
-                                    <h6>Credit cards</h6>
-                                    <p>Avoid hassle by keeping the exact amount ready</p>
-                                </div>
-                            </button>
-                            <div class="line"></div>
-
-                            <a class="closepopup" href="#">X</a>
-                            <button class="btn-orange" style="margin-top: 43px;" type="submit">Continue</button>
+            <div class="menu-container">
+                <div class="rectangle">
+                    <div class="status-bar">
+                        <div class="status-time">
+                            <p>9:41</p>
                         </div>
+                        <div class="status-icon">
+                            <img src="Images/Component/Bars/Status/Wi-Fi.png" alt="">
+                            <img src="Images/Component/Bars/Status/Combined Shape.png" alt="">
+                            <img src="Images/Component/Bars/Status/Battery.png" alt="">
+                        </div>
+                    </div>
+                    <div class="represent">
+                        <img class="represent-avatar" src="Images/Symbols/Avatar profile.png" alt="">
+                        <div>
+                            <p class="represent-name m-0">Lorem Ipsum</p>
+                            <p class="represent-phone m-0">(+84) 912345678</p>
+                        </div>
+                    </div>
+                    <div class="represent-under">
+                        <div class="transaction">
+                            <p class="m-0">Transaction history</p>
+                            <p class="transaction-times m-0">15 times</p>
+                        </div>
+                    </div>
+
+                    <!-- Payment method -->
+                    <div class="container payment">
+                        <a class=" transaction-btn" href="#payment">Payment</a>
+                        <div class="popup" id="payment">
+                            <div class="popup-inner">
+                                <span>Manage payment method</span>
+                                <div class="line"></div>
+                                <p>Add methods</p>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault1">
+                                    <img src="Images/Symbols/ZaloPay-logo 1.png" alt="" style="padding: 6.5px;">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Thanh toán bằng ví điện tử ZaloPay
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                        id="flexRadioDefault2">
+                                    <img src="Images/Symbols/momo 1.png" alt="">
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                        Thanh toán bằng ví điện tử MoMo
+                                    </label>
+                                </div>
+                                <div class="full-line"></div>
+                                <p>Other payment method(s)</p>
+                                <button class="other-method px-0" type="button">
+                                    <img src="Images/Symbols/Price.png" alt="" style="width: 21px; height: 15px;">
+                                    <div>
+                                        <h6>Credit cards</h6>
+                                        <p>Avoid hassle by keeping the exact amount ready</p>
+                                    </div>
+                                </button>
+                                <div class="line"></div>
+
+                                <a class="closepopup" href="#">X</a>
+                                <button class="btn-orange" style="margin-top: 43px;" type="submit">Continue</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-menu">
+                    <div class="menu-item">
+                        <a href="#profile-sec" id="profile" onclick="loadSection(this.id)">
+                            <div class="symbol">
+                                <img src="Images/Symbols/Profile.png" alt="">
+                            </div>
+                            <p class="menu-text">My profile</p>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#order-sec" id="order" onclick="loadSection(this.id)">
+                            <div class="symbol" style="background: #FFE3C9;">
+                                <img src="Images/Symbols/Orders.png" alt="">
+                            </div>
+                            <p class="menu-text">Order</p>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#news-sec" id="news" onclick="loadSection(this.id)">
+                            <div class="symbol" style="background: #FFC9CE;">
+                                <img src="Images/Symbols/News.png" alt="">
+                            </div>
+                            <p class="menu-text">News</p>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#faqs-sec" id="faqs" onclick="loadSection(this.id)">
+                            <div class="symbol" style="background: #CEEED7;                ">
+                                <img src="Images/Symbols/FAQs.png" alt="">
+                            </div>
+                            <p class="menu-text">FAQs</p>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#partner-sec" id="partner" onclick="loadSection(this.id)">
+                            <div class="symbol" style="background: #F4D4C9;                ">
+                                <img src="Images/Symbols/Become a partner.png" alt="">
+                            </div>
+                            <p class="menu-text">Become a partner</p>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="#help-sec" id="help" onclick="loadSection(this.id)">
+                            <div class="symbol" style="background: #CDD6F0;                ">
+                                <img src="Images/Symbols/Help center.png" alt="">
+                            </div>
+                            <p class="menu-text">Help Center</p>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="profile-menu">
-                <div class="menu-item">
-                    <a href="#profile-sec" id="profile" onclick="loadSection(this.id)">
-                        <div class="symbol">
-                            <img src="Images/Symbols/Profile.png" alt="">
-                        </div>
-                        <p class="menu-text">My profile</p>
-                    </a>
-                </div>
-                <div class="menu-item">
-                    <a href="#order-sec" id="order" onclick="loadSection(this.id)">
-                        <div class="symbol" style="background: #FFE3C9;">
-                            <img src="Images/Symbols/Orders.png" alt="">
-                        </div>
-                        <p class="menu-text">Order</p>
-                    </a>
-                </div>
-                <div class="menu-item">
-                    <a href="#news-sec" id="news" onclick="loadSection(this.id)">
-                        <div class="symbol" style="background: #FFC9CE;">
-                            <img src="Images/Symbols/News.png" alt="">
-                        </div>
-                        <p class="menu-text">News</p>
-                    </a>
-                </div>
-                <div class="menu-item">
-                    <a href="#faqs-sec" id="faqs" onclick="loadSection(this.id)">
-                        <div class="symbol" style="background: #CEEED7;                ">
-                            <img src="Images/Symbols/FAQs.png" alt="">
-                        </div>
-                        <p class="menu-text">FAQs</p>
-                    </a>
-                </div>
-                <div class="menu-item">
-                    <a href="#partner-sec" id="partner" onclick="loadSection(this.id)">
-                        <div class="symbol" style="background: #F4D4C9;                ">
-                            <img src="Images/Symbols/Become a partner.png" alt="">
-                        </div>
-                        <p class="menu-text">Become a partner</p>
-                    </a>
-                </div>
-                <div class="menu-item">
-                    <a href="#help-sec" id="help" onclick="loadSection(this.id)">
-                        <div class="symbol" style="background: #CDD6F0;                ">
-                            <img src="Images/Symbols/Help center.png" alt="">
-                        </div>
-                        <p class="menu-text">Help Center</p>
-                    </a>
-                </div>
+            <!-- Nav-bar -->
+            <div class="nav-bar">
+                <ul>
+                    <li class="nav-item">
+                        <a href="#home-sec" id="home" onclick="loadSection(this.id)">
+                            <i class="fas fa-map"></i>
+                            Map
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#stores-sec" id="stores" onclick="loadSection(this.id)">
+                            <i class="fas fa-store-alt"></i>
+                            Stores
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#scan-sec" onclick="loadSection(this.id)" id="scan">
+                            <img src="Images/Component/Bars/Tabs/Scan QR.png" alt="">
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#noti-sec" id="noti" onclick="loadSection(this.id)">
+                            <i class="bi bi-app-indicator"></i>
+                            Notifications
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#menu-sec" id="menu" onclick="loadSection(this.id)">
+                            <i class="far fa-user"></i>
+                            Profile
+                        </a>
+                    </li>
+                </ul>
+                <img src="Images/Component/Bars/Tabs/Rectangle 24.jpg" alt="" class="navigation">
             </div>
         </section>
 
@@ -729,7 +1067,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
+            <a href="#menu-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
             <h1 class="thread">My Profile</h1>
 
             <div class="row m-0" style="position: absolute; top: 136px;">
@@ -798,7 +1136,7 @@
                                             </div>
                                         </div>
                                         <div class="col- 12 col-md-12 col-sm-12 col-xs-12 px-0">
-                                            <button class="btn btn-orange" type="submit">Save</button>
+                                            <button class="btn-orange" type="submit">Save</button>
                                         </div>
                                     </form>
                                 </div>
@@ -850,7 +1188,7 @@
                                         <a href="#" class="text-center text-dark text-underline"><span><ins>Forgot
                                                     password?</ins> </span></a>
                                         <div class="col-12 col-md-12 col-sm-12 col-xs-12 px-0">
-                                            <button class="btn btn-orange" type="button" onclick="">Save</button>
+                                            <button class="btn-orange" type="button" onclick="">Save</button>
                                         </div>
                                     </form>
                                 </div>
@@ -886,7 +1224,8 @@
                         <!-- Accordion item 4 -->
                         <div class="">
                             <div id="headingFour" class="menu-header">
-                                <a href="" class="d-flex position-relative text-dark collapsible-link" id="signout">
+                                <a href="#login-sec" class="d-flex position-relative text-dark collapsible-link"
+                                    id="signout">
                                     <div class="symbol" style="background-color: #F4D4C9;">
                                         <img src="Images/Symbols/Sign out.png" alt="">
                                     </div>
@@ -946,7 +1285,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
+            <a href="#menu-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
             <h1 class="thread">Order</h1>
 
             <div class="box">
@@ -1022,7 +1361,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
+            <a href="#menu-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
             <h1 class="thread">News</h1>
             <a href="#" class="more">Xem thêm</a>
 
@@ -1147,7 +1486,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
+            <a href="#menu-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
             <h1 class="thread">Frequently Asked Questions</h1>
             <div class="sub-thread">
                 <h6>Frequently asked questions and feedback</h6>
@@ -1203,7 +1542,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
+            <a href="#menu-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
             <h1 class="thread">Become Our Partner</h1>
             <div class="sub-thread">
                 <h6>Please fill in the form below, we will call you shortly!</h6>
@@ -1211,21 +1550,21 @@
 
             <div class="below partner">
                 <form class="row g-3 needs-validation" novalidate>
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <input type="text" class="form-control" id="validationLocation" placeholder="Your Location"
                             required>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <input type="text" class="form-control" id="validationContactPerson"
                             placeholder="Contact person" required>
                         <div class="valid-feedback">
                             Looks good!
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-12">
                         <div class="row mx-0">
                             <select class="form-select col-4" id="validationCountryCode" required>
                                 <option selected disabled value="" style="padding-left: 10px;">Select</option>
@@ -1239,7 +1578,7 @@
                             <input type="text" class="form-control col-8" id="validationPhoneNumber" required>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <div class="input-group has-validation">
                             <input type="text" class="form-control" id="validationEmail"
                                 aria-describedby="inputGroupAppend" required>
@@ -1250,20 +1589,20 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <input type="text" class="form-control" id="validationCity" placeholder="Province/City"
                             required>
                         <div class="invalid-feedback">
                             Please provide a city.
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-12">
                         <input type="text" class="form-control" id="validationAddress" placeholder="Address" required>
                         <div class="invalid-feedback">
                             Please provide your address.
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-12">
                         <input type="text" class="form-control" id="validationDescription"
                             placeholder="Description about your location" required>
                     </div>
@@ -1287,7 +1626,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
+            <a href="#menu-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
             <h1 class="thread">Help Center</h1>
 
             <div class="below">
@@ -1319,7 +1658,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="help"></a>
+            <a href="#help-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="help"></a>
 
             <div class="help-item">
                 <div style="width: 355px;">
@@ -1372,7 +1711,7 @@
                 </div>
             </div>
 
-            <a href="" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="help"></a>
+            <a href="help-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="help"></a>
 
             <div class="help-item">
                 <div style="width: 355px;">
@@ -1416,7 +1755,6 @@
         <div class="loader">
             <div class="ring"></div>
         </div>
-
     </main>
 
     <footer></footer>

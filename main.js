@@ -61,7 +61,7 @@ nextBtn.addEventListener("click", () => {
     stepsContainer.style.transition = "all 400ms ease";
     currentStep++;
 
-    if(currentStep >= steps.length ){
+    if (currentStep >= steps.length) {
         stepsContainer.style.transition = "unset";
         onboard.classList.add("none");
         onboard.classList.remove("flex");
@@ -81,3 +81,17 @@ nextBtn.addEventListener("click", () => {
         nextBtn.innerHTML = "Continue";
     }
 });
+
+/* Nav-bar effect */
+navs = document.getElementsByClassName('nav-item')
+
+
+/* Sign out button */
+var signOut = document.getElementById('signout');
+signOut.addEventListener("click", function () {
+    document.getElementById("profile-sec").classList.add("none");
+    document.getElementById("profile-sec").classList.remove("flex");
+
+    document.getElementById('login-sec').classList.remove("none");
+    document.getElementById('login-sec').classList.add("flex");
+})
