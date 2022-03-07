@@ -1,0 +1,24 @@
+.direction-container{
+    width: 375px;
+    height: 812px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 0;
+}
+
+.direction-container #getLocation{
+    position: absolute;
+    top: 134px;
+    right: 14px;
+    width: 47px;
+    height: 47px;
+}
+#direction-sec .btn-back{
+    position: absolute;
+    top: 134px;
+    left: 15px;
+    box-shadow: rgb(0 0 0 / 30%) 0px 1px 4px -1px;
+}

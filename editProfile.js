@@ -1,13 +1,13 @@
 /* Handler see password */
 var state = false;
-function toggle() {
+function toggle(id) {
 	if (state) {
-		document.getElementById("pass1").setAttribute("type", "password");
-		document.getElementById("img1").src = "Images/Symbols/blindfold.png"
+		document.getElementById("pass-" + id).setAttribute("type", "password");
+		document.getElementById("img-" + id).src = "Images/Symbols/blindfold.png";
 		state = false
 	} else {
-		document.getElementById("pass1").setAttribute("type", "text");
-		document.getElementById("img1").src = "Images/Symbols/Read.png"
+		document.getElementById("pass-" + id).setAttribute("type", "text");
+		document.getElementById("img-" + id).src = "Images/Symbols/Read.png";
 		state = true;
 	}
 }

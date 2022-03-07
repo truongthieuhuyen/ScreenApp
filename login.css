@@ -251,7 +251,7 @@ p {
     font-weight: 700;
     line-height: 30px;
     letter-spacing: 1px;
-    margin: 7px auto 18px;
+    margin: 7px auto 10px;
 }
 
 .forget .popup p {
@@ -262,6 +262,7 @@ p {
     line-height: 17px;
     letter-spacing: -0.3858824074268341px;
     color: #757575;
+    margin: 0px;
 }
 
 .otp-code {

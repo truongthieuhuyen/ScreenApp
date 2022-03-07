@@ -12,7 +12,7 @@ window.onload = function () {
 
 /* Show section */
 function loadSection(id) {
-    var myVar = setTimeout(showSection(id), 3000);
+    var myVar = setTimeout(showSection(id), 10000);
 }
 
 function showSection(id) {
@@ -75,7 +75,9 @@ nextBtn.addEventListener("click", () => {
     dots.forEach((d) => {
         d.classList.remove("active");
     })
-    dots[currentStep].classList.add("active");
+    if (currentStep <= steps.length - 1) {
+        dots[currentStep].classList.add("active");
+    }
 
     if (currentStep == steps.length - 1) {
         nextBtn.innerHTML = "Continue";
@@ -83,8 +85,11 @@ nextBtn.addEventListener("click", () => {
 });
 
 /* Nav-bar effect */
-navs = document.getElementsByClassName('nav-item')
-
+// navs = document.querySelector('.nav-item-link');
+// navs.addEventListener("click", function () {
+//     navs.classList.remove("active");
+//     this.classList.add("active");
+// })
 
 /* Sign out button */
 var signOut = document.getElementById('signout');
@@ -95,3 +100,28 @@ signOut.addEventListener("click", function () {
     document.getElementById('login-sec').classList.remove("none");
     document.getElementById('login-sec').classList.add("flex");
 })
+
+/* Checked payment method*/
+const getMethod = document.querySelector('#get-method');
+const radioButtons = document.querySelectorAll('.form-check-input');
+getMethod.addEventListener("click", () => {
+    // let selectedMethod;
+    for (const radioButton of radioButtons) {
+        if (radioButton.checked) {
+            // selectedMethod = radioButton.id;
+            document.querySelector(".print-out").style.display = "flex";
+            getMethod.innerHTML = "Verify";
+            if (radioButton.id = "ZaloPay") {
+                document.querySelector("#method-checked > img").src = "Images/Symbols/ZaloPay-logo 1.png";
+                document.querySelector("#method-checked > label").innerHTML = "Ví ZaloPay ****1234"
+            }
+            else if (radioButton.id = "MoMo") {
+                document.querySelector("#method-checked > img").src = "Images/Symbols/momo 1.png";
+                document.querySelector("#method-checked > label").innerHTML = "Ví MoMo ****1234"
+            }
+        }
+        // while(getMethod.innerHTML = "Verify"){}
+    }
+    // show the output:
+    // alert(selectedMethod ? `You selected ${selectedMethod}` : `You haven't selected any size`);
+});

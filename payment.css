@@ -128,3 +128,8 @@
 .other-method p {
     font-size: 12px;
 }
+
+.print-out{
+    display: none;
+    flex-direction: column;
+}

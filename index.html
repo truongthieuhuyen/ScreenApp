@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="loacation.css">
+    <link rel="stylesheet" href="direction.css">
     <link rel="stylesheet" href="store.css">
     <link rel="stylesheet" href="notification.css">
     <link rel="stylesheet" href="profile.css">
@@ -49,7 +50,7 @@
 
     <main>
         <!-- Onboarding section -->
-        <section id="onboard-sec" class="none">
+        <section id="onboard-sec" class="flex">
             <div class="onboarding-container">
                 <div class="content">
                     <div class="rectangle--sm"></div>
@@ -152,7 +153,7 @@
                                                     <input type="text" class="form-control" value="+84 912345678"
                                                         disabled>
                                                 </div>
-                                                <button class="btn btn-orange" type="button">
+                                                <button class="btn-orange" type="button">
                                                     <a href="#send-mess">Send</a>
                                                 </button>
                                                 <a class="closepopup" href="#">X</a>
@@ -186,7 +187,7 @@
                                                         <div class="boxx">2</div>
                                                     </div>
                                                 </div>
-                                                <button class="btn btn-orange" type="submit">
+                                                <button class="btn-orange" type="button">
                                                     <a href="#">Continue</a>
                                                 </button>
                                                 <a class="closepopup" href="#">X</a>
@@ -363,7 +364,7 @@
         </section>
 
         <!-- Home section -->
-        <section id="home-sec" class="flex">
+        <section id="home-sec" class="none">
             <div class="map-container">
                 <div class="mapouter">
                     <div class="gmap_canvas">
@@ -423,31 +424,30 @@
                 <div class="nav-bar">
                     <ul>
                         <li class="nav-item">
-                            <a href="#home-sec" id="home" class="active">
+                            <a href="#home-sec" id="home" class="nav-item-link active">
                                 <i class="fas fa-map"></i>
                                 Map
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#stores-sec" id="stores" onclick="loadSection(this.id)">
+                            <a href="#stores-sec" class="nav-item-link" id="stores" onclick="loadSection(this.id)">
                                 <i class="fas fa-store-alt"></i>
                                 Stores
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#scan-sec">
-                                <img src="Images/Component/Bars/Tabs/Scan QR.png" alt="" onclick="loadSection(this.id)"
-                                    id="scan">
+                            <a href="#scan-sec" onclick="loadSection(this.id)" id="scan">
+                                <img src="Images/Component/Bars/Tabs/Scan QR.png" alt="">
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#noti-sec" id="noti" onclick="loadSection(this.id)">
+                            <a href="#noti-sec" class="nav-item-link" id="noti" onclick="loadSection(this.id)">
                                 <i class="bi bi-app-indicator"></i>
                                 Notifications
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#menu-sec" id="menu" onclick="loadSection(this.id)">
+                            <a href="#menu-sec" class="nav-item-link" id="menu" onclick="loadSection(this.id)">
                                 <i class="far fa-user"></i>
                                 Profile
                             </a>
@@ -533,19 +533,18 @@
         </section>
 
         <!-- Direction section -->
-        <section id="direction" class="none">
-            <div class="status-bar">
-                <div class="status-time">
-                    <p>9:41</p>
-                </div>
-                <div class="status-icon">
-                    <img src="Images/Component/Bars/Status/Wi-Fi.png" alt="">
-                    <img src="Images/Component/Bars/Status/Combined Shape.png" alt="">
-                    <img src="Images/Component/Bars/Status/Battery.png" alt="">
-                </div>
-            </div>
+        <section id="direction-sec" class="none">
 
-            <a href="#location-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="location"></a>
+            <div class="direction-container">
+                <a href="#location-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)"
+                    id="location"></a>
+                <iframe width="100%" height="100%" style="border:0;" loading="lazy" allowfullscreen
+                    src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJPXXs0yhVNDERdodfojIB8A0&destination=place_id:ChIJD1MLjmyrNTERHwGI5kbt_Hs&key=AIzaSyDgJibLPJ6Lbu9Mq76Lv6Re77EKXND3NzQ&zoom=11">
+                </iframe>
+                <a href="#" id="getLocation">
+                    <img src="Images/Symbols/Location-1.png" alt="">
+                </a>
+            </div>
         </section>
 
         <!-- QR infomations section -->
@@ -738,13 +737,14 @@
                 <div class="nav-bar">
                     <ul>
                         <li class="nav-item">
-                            <a href="#home-sec" id="home" onclick="loadSection(this.id)">
+                            <a href="#home-sec" class="nav-item-link" id="home" onclick="loadSection(this.id)">
                                 <i class="fas fa-map"></i>
                                 Map
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#stores-sec" id="stores" onclick="loadSection(this.id)">
+                            <a href="#stores-sec" class="nav-item-link active id=" stores"
+                                onclick="loadSection(this.id)">
                                 <i class="fas fa-store-alt"></i>
                                 Stores
                             </a>
@@ -755,13 +755,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#noti-sec" id="noti" onclick="loadSection(this.id)">
+                            <a href="#noti-sec" class="nav-item-link" id="noti" onclick="loadSection(this.id)">
                                 <i class="bi bi-app-indicator"></i>
                                 Notifications
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#menu-sec" id="menu" onclick="loadSection(this.id)">
+                            <a href="#menu-sec" class="nav-item-link" id="menu" onclick="loadSection(this.id)">
                                 <i class="far fa-user"></i>
                                 Profile
                             </a>
@@ -797,9 +797,9 @@
             </div>
             <h1 class="thread">Notifications</h1>
             <h6 class="sub-thread">Your most recent news</h6>
-            <button id="readAll" type="button">
+            <a href="#" id="readAll" type="button">
                 Read all
-            </button>
+            </a>
             <div class="noti-container">
                 <ul class="noti-list">
                     <li class="noti">
@@ -863,13 +863,13 @@
                 <div class="nav-bar">
                     <ul>
                         <li class="nav-item">
-                            <a href="#home-sec" id="home" onclick="loadSection(this.id)">
+                            <a href="#home-sec" class="nav-item-link" id="home" onclick="loadSection(this.id)">
                                 <i class="fas fa-map"></i>
                                 Map
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#stores-sec" id="stores" onclick="loadSection(this.id)">
+                            <a href="#stores-sec" class="nav-item-link" id="stores" onclick="loadSection(this.id)">
                                 <i class="fas fa-store-alt"></i>
                                 Stores
                             </a>
@@ -880,13 +880,13 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#noti-sec" id="noti" onclick="loadSection(this.id)">
+                            <a href="#noti-sec" class="nav-item-link active id=" noti" onclick="loadSection(this.id)">
                                 <i class="bi bi-app-indicator"></i>
                                 Notifications
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#menu-sec" id="menu" onclick="loadSection(this.id)">
+                            <a href="#menu-sec" class="nav-item-link" id="menu" onclick="loadSection(this.id)">
                                 <i class="far fa-user"></i>
                                 Profile
                             </a>
@@ -896,7 +896,7 @@
                 </div>
             </div>
         </section>
-        <div class=""></div>
+
         <!-- Menu Profile section -->
         <section id="menu-sec" class="none">
             <div class="menu-container">
@@ -930,22 +930,32 @@
                         <a class=" transaction-btn" href="#payment">Payment</a>
                         <div class="popup" id="payment">
                             <div class="popup-inner">
-                                <span>Manage payment method</span>
+                                <span style="margin-bottom: 24px;">Manage payment method</span>
                                 <div class="line"></div>
+
+                                <!-- After method checked -->
+                                <div class="print-out">
+                                    <p>Digital payment method(s)</p>
+                                    <div id="method-checked" style="display: flex;">
+                                        <img src="" alt="" id="checked-img">
+                                        <label class="form-check-label"></label>
+                                    </div>
+                                    <div class="full-line"></div>
+                                </div>
+
+                                <!-- Choose method first -->
                                 <p>Add methods</p>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault1">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="ZaloPay">
                                     <img src="Images/Symbols/ZaloPay-logo 1.png" alt="" style="padding: 6.5px;">
-                                    <label class="form-check-label" for="flexRadioDefault1">
+                                    <label class="form-check-label" for="ZaloPay">
                                         Thanh toán bằng ví điện tử ZaloPay
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault2">
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="MoMo">
                                     <img src="Images/Symbols/momo 1.png" alt="">
-                                    <label class="form-check-label" for="flexRadioDefault2">
+                                    <label class="form-check-label" for="MoMo">
                                         Thanh toán bằng ví điện tử MoMo
                                     </label>
                                 </div>
@@ -961,7 +971,8 @@
                                 <div class="line"></div>
 
                                 <a class="closepopup" href="#">X</a>
-                                <button class="btn-orange" style="margin-top: 43px;" type="submit">Continue</button>
+                                <button class="btn-orange" style="margin-top: 43px;" type="submit"
+                                    id="get-method">Continue</button>
                             </div>
                         </div>
                     </div>
@@ -1021,13 +1032,13 @@
             <div class="nav-bar">
                 <ul>
                     <li class="nav-item">
-                        <a href="#home-sec" id="home" onclick="loadSection(this.id)">
+                        <a href="#home-sec" class="nav-item-link" id="home" onclick="loadSection(this.id)">
                             <i class="fas fa-map"></i>
                             Map
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#stores-sec" id="stores" onclick="loadSection(this.id)">
+                        <a href="#stores-sec" class="nav-item-link" id="stores" onclick="loadSection(this.id)">
                             <i class="fas fa-store-alt"></i>
                             Stores
                         </a>
@@ -1038,13 +1049,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#noti-sec" id="noti" onclick="loadSection(this.id)">
+                        <a href="#noti-sec" class="nav-item-link" id="noti" onclick="loadSection(this.id)">
                             <i class="bi bi-app-indicator"></i>
                             Notifications
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#menu-sec" id="menu" onclick="loadSection(this.id)">
+                        <a href="#menu-sec" class="nav-item-link active" id="menu" onclick="loadSection(this.id)">
                             <i class="far fa-user"></i>
                             Profile
                         </a>
@@ -1164,25 +1175,25 @@
                                 <div class="menu-expand" style="height: 285px;">
                                     <form class="row g-3 needs-validation form " novalidate>
                                         <div class=" col-12 col-md-12 px-0">
-                                            <input type="password" class="form-control" id="pass1"
+                                            <input type="password" class="form-control" id="pass-eye1"
                                                 placeholder="Old password" required>
                                             <div class="valid-tooltip">
                                                 Looks good!
                                             </div>
-                                            <button class="border-0 bg-white rounded-circle eye" onclick="toggle()"
-                                                type="button" id="eye1">
-                                                <img src="Images/Symbols/blindfold.png" alt="" id="img1">
+                                            <button class="border-0 bg-white rounded-circle eye"
+                                                onclick="toggle(this.id)" type="button" id="eye1">
+                                                <img src="Images/Symbols/blindfold.png" alt="" id="img-eye1">
                                             </button>
                                         </div>
                                         <div class="col-12 col-md-12 px-0">
-                                            <input type="password" class="form-control" id="pass2"
+                                            <input type="password" class="form-control" id="pass-eye2"
                                                 placeholder="New password" required>
                                             <div class="valid-tooltip">
                                                 Looks good!
                                             </div>
-                                            <button class="border-0 bg-white rounded-circle eye" onclick="toggle()"
-                                                type="button" id="eye2">
-                                                <img src="Images/Symbols/blindfold.png" alt="">
+                                            <button class="border-0 bg-white rounded-circle eye"
+                                                onclick="toggle(this.id)" type="button" id="eye2">
+                                                <img src="Images/Symbols/blindfold.png" alt="" id="img-eye2">
                                             </button>
                                         </div>
                                         <a href="#" class="text-center text-dark text-underline"><span><ins>Forgot
@@ -1769,6 +1780,7 @@
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <script src="editProfile.js"></script>
 </body>
 
 </html>
