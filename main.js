@@ -104,24 +104,27 @@ signOut.addEventListener("click", function () {
 /* Checked payment method*/
 const getMethod = document.querySelector('#get-method');
 const radioButtons = document.querySelectorAll('.form-check-input');
+const removeMethod = document.querySelector('#remove-method');
 getMethod.addEventListener("click", () => {
-    // let selectedMethod;
+
     for (const radioButton of radioButtons) {
         if (radioButton.checked) {
-            // selectedMethod = radioButton.id;
             document.querySelector(".print-out").style.display = "flex";
             getMethod.innerHTML = "Verify";
-            if (radioButton.id = "ZaloPay") {
+            if (radioButton.id == "ZaloPay") {
                 document.querySelector("#method-checked > img").src = "Images/Symbols/ZaloPay-logo 1.png";
                 document.querySelector("#method-checked > label").innerHTML = "Ví ZaloPay ****1234"
             }
-            else if (radioButton.id = "MoMo") {
+            else if (radioButton.id == "MoMo") {
                 document.querySelector("#method-checked > img").src = "Images/Symbols/momo 1.png";
                 document.querySelector("#method-checked > label").innerHTML = "Ví MoMo ****1234"
             }
         }
-        // while(getMethod.innerHTML = "Verify"){}
     }
-    // show the output:
-    // alert(selectedMethod ? `You selected ${selectedMethod}` : `You haven't selected any size`);
 });
+removeMethod.addEventListener("click", () => {
+    document.querySelector("#method-checked > img").src = "";
+    document.querySelector("#method-checked > label").innerHTML = "";
+    getMethod.innerHTML = "Continue";
+    document.querySelector(".print-out").style.display = "none";
+})

@@ -14,7 +14,7 @@
     justify-content: center;
     position: fixed;
     width: inherit;
-    height: inherit;
+    height: 100%;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 2;
@@ -47,8 +47,8 @@
 }
 
 .payment .popup:target .popup-inner {
-    bottom: calc(812px - 110%);
-    /* right: 0; */
+    /* bottom: calc(812px - 110%); */
+    bottom: -81px;
     /* transform: rotate(0deg); */
 }
 
@@ -129,7 +129,23 @@
     font-size: 12px;
 }
 
-.print-out{
+.print-out {
     display: none;
     flex-direction: column;
+}
+
+.print-out #method-checked {
+    align-items: center;
+}
+
+.print-out #remove-method {
+    background: none;
+    border: none;
+    color: #FF0000;
+    position: absolute;
+    right: 18px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    text-decoration: underline;
 }
