@@ -28,6 +28,10 @@
     top: 143px;
     border-radius: 15px;
 }
+.noti-link{
+    display: flex;
+    color: black;
+}
 
 .noti img {
     width: 26px;

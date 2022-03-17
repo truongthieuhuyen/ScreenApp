@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="editProfile.css">
     <link rel="stylesheet" href="order.css">
     <link rel="stylesheet" href="news.css">
+    <link rel="stylesheet" href="newDetail.css">
     <link rel="stylesheet" href="faqs.css">
     <link rel="stylesheet" href="partner.css">
     <link rel="stylesheet" href="help.css">
@@ -315,7 +316,8 @@
 
         <!-- Verify phone number -->
         <section id="verify-sec" class="none">
-            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
+            <a href="#otpVerification-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)"
+                id="otpVerification"></a>
             <div class="login">
                 <h4 class="greeting">Verify your phone number</h4>
                 <h6>We have sent you an SMS with a code to enter number</h6>
@@ -323,7 +325,7 @@
                     <input type="text" class="form-control" value="+84 912345678" disabled
                         style="background-color: #ffffff;">
                 </div>
-                <button class="btn btn-orange" onclick="loadSection(this.id)" id="otpVerification">
+                <button class="btn-orange" onclick="loadSection(this.id)" id="otpVerification">
                     <a href="#" style="color: #ffffff;">Next</a>
                 </button>
             </div>
@@ -331,7 +333,7 @@
 
         <!-- OTP verification 2 -->
         <section id="otpVerification-sec" class="none">
-            <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
+            <a href="#verify-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="verify"></a>
             <div class="login">
                 <h4 class="greeting">Phone Verification</h4>
                 <h6>Enter your OTP code here</h6>
@@ -357,7 +359,7 @@
                 </div>
                 <h6>Didn’t you received any code? </h6>
                 <a href="#" id="reset-code">Resent new code</a>
-                <button class="btn btn-orange" onclick="loadSection(this.id)" id="home">
+                <button class="btn-orange" onclick="loadSection(this.id)" id="home">
                     <a href="#" style="color: #ffffff;">Verify</a>
                 </button>
             </div>
@@ -743,7 +745,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#stores-sec" class="nav-item-link active id=" stores"
+                            <a href="#stores-sec" class="nav-item-link active" id="stores"
                                 onclick="loadSection(this.id)">
                                 <i class="fas fa-store-alt"></i>
                                 Stores
@@ -785,16 +787,7 @@
 
         <!-- Notifications section -->
         <section id="noti-sec" class="none">
-            <div class="status-bar">
-                <div class="status-time">
-                    <p>9:41</p>
-                </div>
-                <div class="status-icon">
-                    <img src="Images/Component/Bars/Status/Wi-Fi.png" alt="">
-                    <img src="Images/Component/Bars/Status/Combined Shape.png" alt="">
-                    <img src="Images/Component/Bars/Status/Battery.png" alt="">
-                </div>
-            </div>
+            <div class="space"></div>
             <h1 class="thread">Notifications</h1>
             <h6 class="sub-thread">Your most recent news</h6>
             <a href="#" id="readAll" type="button">
@@ -803,60 +796,74 @@
             <div class="noti-container">
                 <ul class="noti-list">
                     <li class="noti">
-                        <img src="Images/Symbols/Avatar notifications.png" alt="">
-                        <div class="noti-textbox">
-                            <h4>Lorem ipsum</h4>
-                            <p>This must be it illustration design done in adobe illustrator.</p>
-                            <p>12:00 12/12/2021</p>
-                        </div>
+                        <a href="#" class="noti-link" onclick="loadSection(this.id)" id="noti-detail">
+                            <img src="Images/Symbols/Avatar notifications.png" alt="">
+                            <div class="noti-textbox">
+                                <h4>Lorem ipsum</h4>
+                                <p>This must be it illustration design done in adobe illustrator.</p>
+                                <p>12:00 12/12/2021</p>
+                            </div>
+                        </a>
                     </li>
                     <li class="noti">
-                        <img src="Images/Symbols/Avatar notifications.png" alt="">
-                        <div class="noti-textbox">
-                            <h4>Lorem ipsum</h4>
-                            <p>This must be it illustration design done in adobe illustrator.</p>
-                            <p>12:00 12/12/2021</p>
-                        </div>
+                        <a href="#" class="noti-link" onclick="loadSection(this.id)" id="noti-detail">
+                            <img src="Images/Symbols/Avatar notifications.png" alt="">
+                            <div class="noti-textbox">
+                                <h4>Lorem ipsum</h4>
+                                <p>This must be it illustration design done in adobe illustrator.</p>
+                                <p>12:00 12/12/2021</p>
+                            </div>
+                        </a>
                     </li>
                     <li class="noti">
-                        <img src="Images/Symbols/Avatar notifications.png" alt="">
-                        <div class="noti-textbox">
-                            <h4>Lorem ipsum</h4>
-                            <p>This must be it illustration design done in adobe illustrator.</p>
-                            <p>12:00 12/12/2021</p>
-                        </div>
+                        <a href="#" class="noti-link" onclick="loadSection(this.id)" id="noti-detail">
+                            <img src="Images/Symbols/Avatar notifications.png" alt="">
+                            <div class="noti-textbox">
+                                <h4>Lorem ipsum</h4>
+                                <p>This must be it illustration design done in adobe illustrator.</p>
+                                <p>12:00 12/12/2021</p>
+                            </div>
+                        </a>
                     </li>
                     <li class="noti">
-                        <img src="Images/Symbols/Avatar notifications.png" alt="">
-                        <div class="noti-textbox">
-                            <h4>Lorem ipsum</h4>
-                            <p>This must be it illustration design done in adobe illustrator.</p>
-                            <p>12:00 12/12/2021</p>
-                        </div>
+                        <a href="#" class="noti-link" onclick="loadSection(this.id)" id="noti-detail">
+                            <img src="Images/Symbols/Avatar notifications.png" alt="">
+                            <div class="noti-textbox">
+                                <h4>Lorem ipsum</h4>
+                                <p>This must be it illustration design done in adobe illustrator.</p>
+                                <p>12:00 12/12/2021</p>
+                            </div>
+                        </a>
                     </li>
                     <li class="noti">
-                        <img src="Images/Symbols/Avatar notifications.png" alt="">
-                        <div class="noti-textbox">
-                            <h4>Lorem ipsum</h4>
-                            <p>This must be it illustration design done in adobe illustrator.</p>
-                            <p>12:00 12/12/2021</p>
-                        </div>
+                        <a href="#" class="noti-link" onclick="loadSection(this.id)" id="noti-detail">
+                            <img src="Images/Symbols/Avatar notifications.png" alt="">
+                            <div class="noti-textbox">
+                                <h4>Lorem ipsum</h4>
+                                <p>This must be it illustration design done in adobe illustrator.</p>
+                                <p>12:00 12/12/2021</p>
+                            </div>
+                        </a>
                     </li>
                     <li class="noti">
-                        <img src="Images/Symbols/Avatar notifications.png" alt="">
-                        <div class="noti-textbox">
-                            <h4>Lorem ipsum</h4>
-                            <p>This must be it illustration design done in adobe illustrator.</p>
-                            <p>12:00 12/12/2021</p>
-                        </div>
+                        <a href="#" class="noti-link" onclick="loadSection(this.id)" id="noti-detail">
+                            <img src="Images/Symbols/Avatar notifications.png" alt="">
+                            <div class="noti-textbox">
+                                <h4>Lorem ipsum</h4>
+                                <p>This must be it illustration design done in adobe illustrator.</p>
+                                <p>12:00 12/12/2021</p>
+                            </div>
+                        </a>
                     </li>
                     <li class="noti">
-                        <img src="Images/Symbols/Avatar notifications.png" alt="">
-                        <div class="noti-textbox">
-                            <h4>Lorem ipsum</h4>
-                            <p>This must be it illustration design done in adobe illustrator.</p>
-                            <p>12:00 12/12/2021</p>
-                        </div>
+                        <a href="#" class="noti-link" onclick="loadSection(this.id)" id="noti-detail">
+                            <img src="Images/Symbols/Avatar notifications.png" alt="">
+                            <div class="noti-textbox">
+                                <h4>Lorem ipsum</h4>
+                                <p>This must be it illustration design done in adobe illustrator.</p>
+                                <p>12:00 12/12/2021</p>
+                            </div>
+                        </a>
                     </li>
                 </ul>
                 <!-- Nav-bar -->
@@ -880,7 +887,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#noti-sec" class="nav-item-link active id=" noti" onclick="loadSection(this.id)">
+                            <a href="#noti-sec" class="nav-item-link active" id=" noti" onclick="loadSection(this.id)">
                                 <i class="bi bi-app-indicator"></i>
                                 Notifications
                             </a>
@@ -894,6 +901,41 @@
                     </ul>
                     <img src="Images/Component/Bars/Tabs/Rectangle 24.jpg" alt="" class="navigation">
                 </div>
+            </div>
+        </section>
+
+        <!-- Notification detail section -->
+        <section id="noti-detail-sec" class="none">
+            <div class="space"></div>
+            <a href="#noti-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="noti"></a>
+
+            <div class="new-detail-container">
+                <h5 class="sub-thread">Xin chào! Đây là thông báo đầu tiên của bạn</h5>
+                <div class="line"></div>
+                <div class="new-detail-status">
+                    <span>08:00 12/12/2021 
+                    </span>
+                </div>
+                <img src="Images/new478.png" alt="" class="new-detail-img">
+                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                    ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                    ipsum</p>
+                <img src="Images/new479.png" alt="" class="new-detail-img">
+                <h6>Phương thức thanh toán của Ishare+ là gì?</h6>
+                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                    ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                    ipsum</p>
+                <img src="Images/new478.png" alt="" class="new-detail-img">
+                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                    ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                    ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                    ipsum lorem
+                    ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                    ipsum Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                    ipsum lorem
+                    ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                    ipsum</p>
+
             </div>
         </section>
 
@@ -978,6 +1020,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Menu -->
                 <div class="profile-menu">
                     <div class="menu-item">
                         <a href="#profile-sec" id="profile" onclick="loadSection(this.id)">
@@ -1068,25 +1111,15 @@
 
         <!-- Profile section -->
         <section id="profile-sec" class="none">
-            <div class="status-bar">
-                <div class="status-time">
-                    <p>9:41</p>
-                </div>
-                <div class="status-icon">
-                    <img src="Images/Component/Bars/Status/Wi-Fi.png" alt="">
-                    <img src="Images/Component/Bars/Status/Combined Shape.png" alt="">
-                    <img src="Images/Component/Bars/Status/Battery.png" alt="">
-                </div>
-            </div>
+            <div class="space"></div>
 
             <a href="#menu-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
             <h1 class="thread">My Profile</h1>
 
             <div class="row m-0" style="position: absolute; top: 136px;">
-                <div class="col-lg-9 px-0 d-flex justify-content-center">
+                <div class="col-12 px-0 d-flex justify-content-center">
                     <!-- Accordion -->
                     <div id="accordionExample" class="accordion">
-
                         <!-- Accordion item 1 -->
                         <div class="">
                             <div id="headingOne" class="menu-header">
@@ -1108,8 +1141,7 @@
                                 <div class="menu-expand">
                                     <img src="Images/Symbols/Avatar profile.png" alt="">
                                     <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-circle" data-toggle="modal"
-                                        data-target="#modelId">
+                                    <button type="button" class="btn-circle" data-toggle="modal" data-target="#modelId">
                                         <img src="Images/Symbols/camera.png" alt="">
                                     </button>
                                     <!-- Form -->
@@ -1362,17 +1394,7 @@
 
         <!-- News section -->
         <section id="news-sec" class="none">
-            <div class="status-bar">
-                <div class="status-time">
-                    <p>9:41</p>
-                </div>
-                <div class="status-icon">
-                    <img src="Images/Component/Bars/Status/Wi-Fi.png" alt="">
-                    <img src="Images/Component/Bars/Status/Combined Shape.png" alt="">
-                    <img src="Images/Component/Bars/Status/Battery.png" alt="">
-                </div>
-            </div>
-
+            <div class="space"></div>
             <a href="#menu-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="menu"></a>
             <h1 class="thread">News</h1>
             <a href="#" class="more">Xem thêm</a>
@@ -1383,7 +1405,7 @@
                         <img class="card-img-top" data-src="holder.js/100x180/" alt="Card image cap"
                             src="Images/Rectangle 47.png">
                         <div class="card-body">
-                            <a href="#">
+                            <a href="#new-detail-sec" onclick="loadSection(this.id)" id="new-detail">
                                 <p>12/12/2021</p>
                                 <h4 class="card-title">Mắt App Ishare+ </h4>
                             </a>
@@ -1393,7 +1415,17 @@
                         <img class="card-img-top" data-src="holder.js/100x180/" alt="Card image cap"
                             src="Images/Rectangle 47.png">
                         <div class="card-body">
-                            <a href="#">
+                            <a href="#new-detail-sec" onclick="loadSection(this.id)" id="new-detail">
+                                <p>12/12/2021</p>
+                                <h4 class="card-title">Mắt App Ishare+ </h4>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" data-src="holder.js/100x180/" alt="Card image cap"
+                            src="Images/Rectangle 47.png">
+                        <div class="card-body">
+                            <a href="#new-detail-sec" onclick="loadSection(this.id)" id="new-detail">
                                 <p>12/12/2021</p>
                                 <h4 class="card-title">Mắt App Ishare+ </h4>
                             </a>
@@ -1408,7 +1440,7 @@
                         <img class="card-img-top" data-src="holder.js/100x180/?text=Image cap" alt="Card image cap"
                             src="Images/Rectangle 48.png">
                         <div class="card-body">
-                            <a href="#" class="card-link">
+                            <a href="#new-detail-sec" onclick="loadSection(this.id)" id="new-detail" class="card-link">
                                 <p>12/12/2021</p>
                                 <h4 class="card-title">Mắt App Ishare+ </h4>
                             </a>
@@ -1418,7 +1450,7 @@
                         <img class="card-img-top" data-src="holder.js/100x180/?text=Image cap" alt="Card image cap"
                             src="Images/Rectangle 48.png">
                         <div class="card-body">
-                            <a href="#" class="card-link">
+                            <a href="#new-detail-sec" onclick="loadSection(this.id)" id="new-detail" class="card-link">
                                 <p>12/12/2021</p>
                                 <h4 class="card-title">Mắt App Ishare+ </h4>
                             </a>
@@ -1428,7 +1460,7 @@
                         <img class="card-img-top" data-src="holder.js/100x180/?text=Image cap" alt="Card image cap"
                             src="Images/Rectangle 48.png">
                         <div class="card-body">
-                            <a href="#" class="card-link">
+                            <a href="#new-detail-sec" onclick="loadSection(this.id)" id="new-detail" class="card-link">
                                 <p>12/12/2021</p>
                                 <h4 class="card-title">Mắt App Ishare+ </h4>
                             </a>
@@ -1438,7 +1470,7 @@
                         <img class="card-img-top" data-src="holder.js/100x180/?text=Image cap" alt="Card image cap"
                             src="Images/Rectangle 48.png">
                         <div class="card-body">
-                            <a href="#" class="card-link">
+                            <a href="#new-detail-sec" onclick="loadSection(this.id)" id="new-detail" class="card-link">
                                 <p>12/12/2021</p>
                                 <h4 class="card-title">Mắt App Ishare+ </h4>
                             </a>
@@ -1448,7 +1480,7 @@
                         <img class="card-img-top" data-src="holder.js/100x180/?text=Image cap" alt="Card image cap"
                             src="Images/Rectangle 48.png">
                         <div class="card-body">
-                            <a href="#" class="card-link">
+                            <a href="#new-detail-sec" onclick="loadSection(this.id)" id="new-detail" class="card-link">
                                 <p>12/12/2021</p>
                                 <h4 class="card-title">Mắt App Ishare+ </h4>
                             </a>
@@ -1458,7 +1490,7 @@
                         <img class="card-img-top" data-src="holder.js/100x180/?text=Image cap" alt="Card image cap"
                             src="Images/Rectangle 48.png">
                         <div class="card-body">
-                            <a href="#" class="card-link">
+                            <a href="#new-detail-sec" onclick="loadSection(this.id)" id="new-detail" class="card-link">
                                 <p>12/12/2021</p>
                                 <h4 class="card-title">Mắt App Ishare+ </h4>
                             </a>
@@ -1466,22 +1498,76 @@
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- New detail section -->
-            <div id="new-detail-sec" class="none">
-                <div class="status-bar">
-                    <div class="status-time">
-                        <p>9:41</p>
+        <!-- New detail section -->
+        <section id="new-detail-sec" class="none">
+            <div class="space"></div>
+            <a href="#news-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="news"></a>
+
+            <div class="new-detail-container">
+                <h5 class="sub-thread">Ra mắt ứng dụng Ishare+</h5>
+                <div class="line"></div>
+                <div class="new-detail-status">
+                    <span>08:00 12/12/2021 |
+                        <i class="fas fa-eye"></i>
+                        68
+                    </span>
+                </div>
+                <img src="Images/new478.png" alt="" class="new-detail-img">
+                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                    ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                    ipsum</p>
+                <img src="Images/new479.png" alt="" class="new-detail-img">
+                <h6>Phương thức thanh toán của Ishare+ là gì?</h6>
+                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                    ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                    ipsum</p>
+                <img src="Images/new478.png" alt="" class="new-detail-img">
+                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                    ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                    ipsum</p>
+                <img src="Images/new479.png" alt="" class="new-detail-img">
+                <h6>Phương thức thanh toán của Ishare+ là gì?</h6>
+                <p>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                    ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+                    ipsum</p>
+            </div>
+
+            <h5>Bài viết liên quan</h5>
+            <div class="slide">
+                <div class="card-group">
+                    <div class="card">
+                        <img class="card-img-top" data-src="holder.js/100x180/" alt="Card image cap"
+                            src="Images/Rectangle 47.png">
+                        <div class="card-body">
+                            <a href="#new-detail-sec" onclick="loadSection(this.id)" id="new-detail">
+                                <p>12/12/2021</p>
+                                <h4 class="card-title">Mắt App Ishare+ </h4>
+                            </a>
+                        </div>
                     </div>
-                    <div class="status-icon">
-                        <img src="Images/Component/Bars/Status/Wi-Fi.png" alt="">
-                        <img src="Images/Component/Bars/Status/Combined Shape.png" alt="">
-                        <img src="Images/Component/Bars/Status/Battery.png" alt="">
+                    <div class="card">
+                        <img class="card-img-top" data-src="holder.js/100x180/" alt="Card image cap"
+                            src="Images/Rectangle 47.png">
+                        <div class="card-body">
+                            <a href="#new-detail-sec" onclick="loadSection(this.id)" id="new-detail">
+                                <p>12/12/2021</p>
+                                <h4 class="card-title">Mắt App Ishare+ </h4>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" data-src="holder.js/100x180/" alt="Card image cap"
+                            src="Images/Rectangle 47.png">
+                        <div class="card-body">
+                            <a href="#new-detail-sec" onclick="loadSection(this.id)" id="new-detail">
+                                <p>12/12/2021</p>
+                                <h4 class="card-title">Mắt App Ishare+ </h4>
+                            </a>
+                        </div>
                     </div>
                 </div>
-
-                <a href="" class="btn-back rounded-circle" onclick="history.back()"></a>
-                <h1 class="thread">Detail </h1>
             </div>
         </section>
 
@@ -1619,7 +1705,7 @@
                             placeholder="Description about your location" required>
                     </div>
                     <div class="col-12">
-                        <button class="btn btn-orange" type="submit">Send</button>
+                        <button class="btn-orange" type="submit">Send</button>
                     </div>
                 </form>
             </div>
@@ -1723,7 +1809,7 @@
                 </div>
             </div>
 
-            <a href="help-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="help"></a>
+            <a href="#help-sec" class="btn-back rounded-circle" onclick="loadSection(this.id)" id="help"></a>
 
             <div class="help-item">
                 <div style="width: 355px;">

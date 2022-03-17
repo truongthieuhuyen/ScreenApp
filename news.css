@@ -33,14 +33,15 @@
 
 #news-sec .card-group {
     display: flex;
-    width: fit-content;
-    height: 216px;
-    overflow-x: hidden;
+    width: max-content;
+    height: -webkit-fill-available;
+    /* overflow-x: overlay; */
+    overflow: hidden;
+    gap: 15px;
 }
 
 #news-sec .card-group .card {
     width: 241px;
-    margin-right: 15px;
     margin-bottom: 0px;
     border: 0px;
     background-color: #F5F5F5;
@@ -96,7 +97,7 @@
     border: 0px;
 }
 
-.news .card img {
+.news .card .card-img-top {
     width: 100%;
     /* height: 100%; */
 }

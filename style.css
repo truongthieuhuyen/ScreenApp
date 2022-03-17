@@ -57,11 +57,10 @@ section {
 } */
 
 .flex {
-    height: 812px;
+    /* height: 812px; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
 }
 
 .none {
@@ -120,8 +119,6 @@ section {
     width: 355px;
     /* left: 10px; */
     /* top: 165px; */
-    text-align: left;
-    line-height: 17px;
 }
 
 .below {

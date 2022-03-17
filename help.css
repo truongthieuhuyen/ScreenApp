@@ -22,6 +22,10 @@
     right: 13px;
 }
 
+.help a p {
+    margin-bottom: 0;
+}
+
 .help-item {
     position: absolute;
     top: 94px;

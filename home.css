@@ -56,7 +56,7 @@
 .map-container .card-group {
     display: flex;
     flex-wrap: nowrap;
-    width: fit-content;
+    width: max-content;
     height: inherit;
     /* overflow-x: hidden; */
     gap: 23px;

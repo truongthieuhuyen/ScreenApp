@@ -60,7 +60,7 @@
     height: 16px;
     /* background: #333; */
     position: absolute;
-    top: calc(50% - 1px);
+    top: calc(50% - 10px);
     right: 1rem;
     display: block;
     transition: all 0.5s;
